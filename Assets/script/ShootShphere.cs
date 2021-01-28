@@ -5,9 +5,9 @@ using UnityEngine;
 public class ShootShphere : MonoBehaviour
 {
     public bool haveme = false;
-    public GameObject temp = null;
+    public GameObject prevHitObj = null;
     LayerMask mask;
-    public HideObject.LightColor owncolor;
+    public ObjectManager.LightColor owncolor;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,28 +18,28 @@ public class ShootShphere : MonoBehaviour
     void Update()
     {
         switch (owncolor) {
-            case HideObject.LightColor.Red:
+            case ObjectManager.LightColor.Red:
                 this.GetComponent<Light>().color = new Color32(255, 0, 0, 255);
                 break;
-            case HideObject.LightColor.Green:
+            case ObjectManager.LightColor.Green:
                 this.GetComponent<Light>().color = new Color32(0, 255, 0, 255);
                 break;
-            case HideObject.LightColor.Blue:
+            case ObjectManager.LightColor.Blue:
                 this.GetComponent<Light>().color = new Color32(0, 0, 255, 255);
                 break;
-            case HideObject.LightColor.Magenta:
+            case ObjectManager.LightColor.Magenta:
                 this.GetComponent<Light>().color = new Color32(255, 0, 255, 255);
                 break;
-            case HideObject.LightColor.Cyan:
+            case ObjectManager.LightColor.Cyan:
                 this.GetComponent<Light>().color = new Color32(0, 255, 255, 255);
                 break;
-            case HideObject.LightColor.Yellow:
+            case ObjectManager.LightColor.Yellow:
                 this.GetComponent<Light>().color = new Color32(255, 255, 0, 255);
                 break;
-            case HideObject.LightColor.White:
+            case ObjectManager.LightColor.White:
                 this.GetComponent<Light>().color = new Color32(255, 255, 255, 255);
                 break;
-            case HideObject.LightColor.Black:
+            case ObjectManager.LightColor.Black:
                 this.GetComponent<Light>().color = new Color32(0, 0, 0, 255);
                 break;
             default:
@@ -50,84 +50,66 @@ public class ShootShphere : MonoBehaviour
         
         if (Physics.SphereCast(pos, this.gameObject.GetComponent<Light>().shadowRadius, transform.forward, out hit,10f)) {
 
-            if (temp != hit.transform.gameObject && temp != null) {
-                if (temp.transform.tag == "HideWord")
+            if (prevHitObj != hit.transform.gameObject && prevHitObj != null) {
+                if (prevHitObj.transform.tag == "HideWord")
                 {
-                    for (int i = 0; i < temp.GetComponent<HideObject>().colorlist.Count; i++)
+                    for (int i = 0; i < prevHitObj.GetComponent<HideObject>().colorlist.Count; i++)
                     {
-                        if (temp.GetComponent<HideObject>().colorlist[i] == owncolor)
+                        if (prevHitObj.GetComponent<HideObject>().colorlist[i] == owncolor)
                         {
-                            temp.GetComponent<HideObject>().colorlist.Remove(temp.GetComponent<HideObject>().colorlist[i]);
+                            prevHitObj.GetComponent<HideObject>().colorlist.Remove(prevHitObj.GetComponent<HideObject>().colorlist[i]);
                         }
                     }
                 }
-                else if (temp.transform.tag == "YellowObject" || temp.transform.tag == "MagentaObject" || temp.transform.tag == "CyanObject")
+                else if (prevHitObj.GetComponent<mixColorObj>())
                 {
-                    for (int i = 0; i < temp.GetComponent<RecieveColor>().colorlist.Count; i++)
-                    {
-                        if (temp.GetComponent<RecieveColor>().colorlist[i] == owncolor)
-                        {
-                            temp.GetComponent<RecieveColor>().colorlist.Remove(temp.GetComponent<RecieveColor>().colorlist[i]);
-                        }
-                    }
-                    temp.GetComponent<RecieveColor>().iscolor1on = false;
-                    temp.GetComponent<RecieveColor>().iscolor2on = false;
+                    prevHitObj.GetComponent<mixColorObj>().receiveColor = owncolor;
                 }
-                temp = null;
+                prevHitObj = null;
                 haveme = false;
             }
             if (hit.transform.tag == "HideWord") {
-                temp = hit.transform.gameObject;
-                for (int i = 0; i < temp.GetComponent<HideObject>().colorlist.Count; i++) {
-                    if (temp.GetComponent<HideObject>().colorlist[i] == owncolor) {
+                prevHitObj = hit.transform.gameObject;
+                for (int i = 0; i < prevHitObj.GetComponent<HideObject>().colorlist.Count; i++) {
+                    if (prevHitObj.GetComponent<HideObject>().colorlist[i] == owncolor) {
                         haveme = true;
                     }
                 }
                 if (haveme == false) {
-                    temp.GetComponent<HideObject>().colorlist.Add(owncolor);
+                    prevHitObj.GetComponent<HideObject>().colorlist.Add(owncolor);
                 }
             }
 
-            if (hit.transform.tag == "YellowObject" || hit.transform.tag == "MagentaObject" || hit.transform.tag == "CyanObject")
+            if (hit.transform.GetComponent<mixColorObj>())
             {
-                temp = hit.transform.gameObject;
-                for (int i = 0; i < temp.GetComponent<RecieveColor>().colorlist.Count; i++)
+                prevHitObj = hit.transform.gameObject;
+                if (prevHitObj.GetComponent<mixColorObj>().receiveColor == owncolor)
                 {
-                    if (temp.GetComponent<RecieveColor>().colorlist[i] == owncolor)
-                    {
-                        haveme = true;
-                    }
+                    haveme = true;
                 }
                 if (haveme == false)
                 {
-                    temp.GetComponent<RecieveColor>().colorlist.Add(owncolor);
+                    prevHitObj.GetComponent<mixColorObj>().receiveColor = owncolor;
                 }
             }
         }
-        else if (temp != null)
+        else if (prevHitObj != null)
         {
-            if (temp.transform.tag == "HideWord")
+            if (prevHitObj.transform.tag == "HideWord")
             {
-                for (int i = 0; i < temp.GetComponent<HideObject>().colorlist.Count; i++)
+                for (int i = 0; i < prevHitObj.GetComponent<HideObject>().colorlist.Count; i++)
                 {
-                    if (temp.GetComponent<HideObject>().colorlist[i] == owncolor)
+                    if (prevHitObj.GetComponent<HideObject>().colorlist[i] == owncolor)
                     {
-                        temp.GetComponent<HideObject>().colorlist.Remove(temp.GetComponent<HideObject>().colorlist[i]);
+                        prevHitObj.GetComponent<HideObject>().colorlist.Remove(prevHitObj.GetComponent<HideObject>().colorlist[i]);
                     }
                 }
-            }else if (temp.transform.tag == "YellowObject" || temp.transform.tag == "MagentaObject" || temp.transform.tag == "CyanObject")
-                {
-                    for (int i = 0; i < temp.GetComponent<RecieveColor>().colorlist.Count; i++)
-                    {
-                        if (temp.GetComponent<RecieveColor>().colorlist[i] == owncolor)
-                        {
-                            temp.GetComponent<RecieveColor>().colorlist.Remove(temp.GetComponent<RecieveColor>().colorlist[i]);
-                        }
-                    }
-                    temp.GetComponent<RecieveColor>().iscolor1on = false;
-                    temp.GetComponent<RecieveColor>().iscolor2on = false;
-                }
-            temp = null;
+            }
+            else if (prevHitObj.GetComponent<mixColorObj>())
+            {
+                prevHitObj.GetComponent<mixColorObj>().receiveColor = ObjectManager.LightColor.White;
+            }
+            prevHitObj = null;
             haveme = false;
         }
     }

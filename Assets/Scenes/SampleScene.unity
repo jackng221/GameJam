@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 162776820}
   - component: {fileID: 162776819}
   m_Layer: 8
-  m_Name: Directional Light (5)
+  m_Name: BlueLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveme: 0
-  temp: {fileID: 0}
+  prevHitObj: {fileID: 0}
   owncolor: 1
 --- !u!108 &162776820
 Light:
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 223052822}
   - component: {fileID: 223052821}
   m_Layer: 8
-  m_Name: Directional Light (1)
+  m_Name: BlueLight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveme: 0
-  temp: {fileID: 0}
+  prevHitObj: {fileID: 0}
   owncolor: 1
 --- !u!108 &223052822
 Light:
@@ -546,7 +546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &250310221
 RectTransform:
   m_ObjectHideFlags: 0
@@ -926,7 +926,6 @@ MonoBehaviour:
   axis: {fileID: 1484955376}
   stat: 0
   filter: {fileID: 1397302697}
-  currentcolor: 6
 --- !u!81 &574453769
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1003,7 +1002,7 @@ GameObject:
   - component: {fileID: 644664130}
   - component: {fileID: 644664129}
   m_Layer: 0
-  m_Name: Directional Light (6)
+  m_Name: YellowLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,7 +1255,7 @@ GameObject:
   - component: {fileID: 705507994}
   - component: {fileID: 705507996}
   m_Layer: 8
-  m_Name: Directional Light
+  m_Name: RedLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1350,7 +1349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveme: 0
-  temp: {fileID: 0}
+  prevHitObj: {fileID: 0}
   owncolor: 0
 --- !u!1 &788261481
 GameObject:
@@ -1512,7 +1511,7 @@ GameObject:
   - component: {fileID: 857425751}
   - component: {fileID: 857425750}
   m_Layer: 0
-  m_Name: Directional Light (4)
+  m_Name: GreenLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1628,6 +1627,8 @@ MonoBehaviour:
   MagentaObject: []
   CyanObject: []
   YellowObject: []
+  PrimaryColorObjects: []
+  MixColorObjects: []
   player: {fileID: 6881632251459722900}
 --- !u!4 &955864382
 Transform:
@@ -1734,10 +1735,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2eb7275bb6f4dc4fac572c3c59df15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideset: {fileID: 957437696}
+  hideGobj: {fileID: 957437696}
   ap: 0
   isstart_fadeout: 0
-  isstart_fadein: 0
   Minus: 5
   Plus: 5
 --- !u!1 &1316788928
@@ -2077,11 +2077,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bc5f9cf85f3b440bded8765daa7946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorlist: 
-  wanted: 0
-  wanted2: 0
-  iscolor1on: 0
-  iscolor2on: 0
+  ObjColor: 0
+  prevColor: 0
+  receiveColor: 0
+  FilterColor: 0000000000000000
+  LightColor: 0000000000000000
+  colorCorrect: 0
   ActualGameObject: {fileID: 1316788928}
   istrigger: 0
 --- !u!65 &1522480882
@@ -2526,10 +2527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2eb7275bb6f4dc4fac572c3c59df15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideset: {fileID: 2034256064}
+  hideGobj: {fileID: 2034256064}
   ap: 0
   isstart_fadeout: 0
-  isstart_fadein: 0
   Minus: 5
   Plus: 5
 --- !u!1 &2081433689
@@ -2711,7 +2711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveme: 0
-  temp: {fileID: 0}
+  prevHitObj: {fileID: 0}
   owncolor: 7
 --- !u!114 &3723029898112039408
 MonoBehaviour:
@@ -3139,7 +3139,6 @@ MonoBehaviour:
   axis: {fileID: 1484955376}
   stat: 0
   filter: {fileID: 1397302697}
-  currentcolor: 6
 --- !u!114 &6881632251459722903
 MonoBehaviour:
   m_ObjectHideFlags: 0

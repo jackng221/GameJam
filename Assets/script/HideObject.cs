@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class HideObject : MonoBehaviour
 {
-    public List<LightColor> colorlist = new List<LightColor>();
+    public List<ObjectManager.LightColor> colorlist = new List<ObjectManager.LightColor>();
     [SerializeField]
     GameObject hideobject;
     public bool iscolor1on = false, iscolor2on = false;
-    
-    public enum LightColor
-    {
-        
-        Red= 0, Blue, Green, Magenta, Cyan, Yellow, White, Black
-    };
-    public LightColor color1,color2;
+    public ObjectManager.LightColor color1,color2;
 
     // Start is called before the first frame update
     void Start()
@@ -51,11 +45,9 @@ public class HideObject : MonoBehaviour
         if (iscolor1on == true && iscolor2on == true)
         {
             hideobject.GetComponent<ObjectColor>().isstart_fadeout = false;
-            hideobject.GetComponent<ObjectColor>().isstart_fadein = true;
         }
         else
         {
-            hideobject.GetComponent<ObjectColor>().isstart_fadein = false;
             hideobject.GetComponent<ObjectColor>().isstart_fadeout = true;
         }
     }

@@ -14,7 +14,7 @@ public class SetCull : MonoBehaviour
     [SerializeField]
     Image filter;
     bool iscomplete = true;
-    public HideObject.LightColor currentcolor = HideObject.LightColor.White;
+    public static ObjectManager.LightColor currentcolor = ObjectManager.LightColor.White;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +30,7 @@ public class SetCull : MonoBehaviour
             stat = stat % 4;
             if (stat == 0)
             {
-                currentcolor = HideObject.LightColor.White;
+                currentcolor = ObjectManager.LightColor.White;
                 filter.color = new Color32(0, 0, 0, 0);
                 axis.transform.DOLocalRotate(new Vector3(0, 0, -90), 1f).OnComplete(() =>
                 {
@@ -41,7 +41,7 @@ public class SetCull : MonoBehaviour
             else if (stat == 1)
             {
                 filter.color = new Color32(255, 0, 0, 100);
-                currentcolor = HideObject.LightColor.Red;
+                currentcolor = ObjectManager.LightColor.Red;
                 axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 1f).OnComplete(() =>
                 {
                     iscomplete = true;
@@ -54,7 +54,7 @@ public class SetCull : MonoBehaviour
                 axis.transform.DOLocalRotate(new Vector3(0, 0, -90), 1f).OnComplete(() =>
                 {
                     filter.color = new Color32(0, 255, 0, 100);
-                    currentcolor = HideObject.LightColor.Green;
+                    currentcolor = ObjectManager.LightColor.Green;
                     axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 1f).OnComplete(() => {
                         cam.GetComponent<Camera>().cullingMask = ~(1 << LayerMask.NameToLayer("GreenObject"));
                         iscomplete = true;
@@ -65,7 +65,7 @@ public class SetCull : MonoBehaviour
                 axis.transform.DOLocalRotate(new Vector3(0, 0, -90), 1f).OnComplete(() =>
                 {
                     filter.color = new Color32(0, 0, 255, 100);
-                    currentcolor = HideObject.LightColor.Blue;
+                    currentcolor = ObjectManager.LightColor.Blue;
                     axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 1f).OnComplete(() => {
                         cam.GetComponent<Camera>().cullingMask = ~(1 << LayerMask.NameToLayer("BlueObject"));
                         iscomplete = true;
