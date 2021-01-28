@@ -32,7 +32,7 @@ public class SetCull : MonoBehaviour
             {
                 currentcolor = ObjectManager.LightColor.White;
                 filter.color = new Color32(255, 255, 255, 0);
-                axis.transform.DOLocalRotate(new Vector3(0, 0, -90), 1f).OnComplete(() =>
+                axis.transform.DOLocalRotate(new Vector3(0, 0, -90), 0.5f).OnComplete(() =>
                 {
                     iscomplete = true;
                     cam.GetComponent<Camera>().cullingMask = LayerMask.NameToLayer("Everything");
@@ -40,9 +40,9 @@ public class SetCull : MonoBehaviour
             }
             else if (stat == 1)
             {
-                filter.color = new Color32(255, 0, 0, 100);
+                filter.color = new Color32(255, 0, 0, 75);
                 currentcolor = ObjectManager.LightColor.Red;
-                axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 1f).OnComplete(() =>
+                axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.5f).OnComplete(() =>
                 {
                     iscomplete = true;
                     cam.GetComponent<Camera>().cullingMask = ~(1 << LayerMask.NameToLayer("RedObject"));
@@ -53,9 +53,9 @@ public class SetCull : MonoBehaviour
             {
                 axis.transform.DOLocalRotate(new Vector3(0, 0, -90), 1f).OnComplete(() =>
                 {
-                    filter.color = new Color32(0, 255, 0, 100);
+                    filter.color = new Color32(0, 255, 0, 75);
                     currentcolor = ObjectManager.LightColor.Green;
-                    axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 1f).OnComplete(() => {
+                    axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.5f).OnComplete(() => {
                         cam.GetComponent<Camera>().cullingMask = ~(1 << LayerMask.NameToLayer("GreenObject"));
                         iscomplete = true;
                     });
@@ -64,9 +64,9 @@ public class SetCull : MonoBehaviour
             else if (stat == 3) {
                 axis.transform.DOLocalRotate(new Vector3(0, 0, -90), 1f).OnComplete(() =>
                 {
-                    filter.color = new Color32(0, 0, 255, 100);
+                    filter.color = new Color32(0, 0, 255, 75);
                     currentcolor = ObjectManager.LightColor.Blue;
-                    axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 1f).OnComplete(() => {
+                    axis.transform.DOLocalRotate(new Vector3(0, 0, 0), 0.5f).OnComplete(() => {
                         cam.GetComponent<Camera>().cullingMask = ~(1 << LayerMask.NameToLayer("BlueObject"));
                         iscomplete = true;
                     });

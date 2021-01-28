@@ -46,13 +46,13 @@ public class mixColorObj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(prevColor != SetCull.currentcolor)
-        {
-            for(int i=0; i < 2; i++)
+        //if (prevColor != SetCull.currentcolor)
+        //{
+            for (int i=0; i < 2; i++)
             {
                 if (SetCull.currentcolor == FilterColor[i]) 
                 {
-                    if (receiveColor == LightColor[1])
+                    if (receiveColor == LightColor[i])
                     {
                         colorCorrect = true;
                         break;
@@ -64,11 +64,11 @@ public class mixColorObj : MonoBehaviour
                 }
             }
             prevColor = SetCull.currentcolor;
-        }
+        //}
 
         if (colorCorrect)
         {
-            ActualGameObject.gameObject.SetActive(true);
+            ActualGameObject.gameObject.SetActive(false);
         }
     }
 }
