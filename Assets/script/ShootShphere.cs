@@ -49,7 +49,6 @@ public class ShootShphere : MonoBehaviour
         Vector3 pos = this.gameObject.transform.position;
         
         if (Physics.SphereCast(pos, this.gameObject.GetComponent<Light>().shadowRadius, transform.forward, out hit,10f)) {
-
             if (temp != hit.transform.gameObject && temp != null) {
                 if (temp.transform.tag == "HideWord")
                 {
