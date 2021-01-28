@@ -14,17 +14,13 @@ public class KeepObjectDisable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.gameObject.GetComponent<RecieveColor>().iscolor1on == false && this.gameObject.GetComponent<RecieveColor>().iscolor2on == false)
+        if (isenter == true && this.gameObject.GetComponent<mixColorObj>().istrigger == true && this.gameObject.GetComponent<mixColorObj>().colorCorrect == true)
         {
-            if (isenter == true && this.gameObject.GetComponent<RecieveColor>().istrigger == true)
-            {
-                this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            }
-            else
-                this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
+        else
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player") {
@@ -37,7 +33,7 @@ public class KeepObjectDisable : MonoBehaviour
         if (other.transform.tag == "Player")
         {
             isenter = false;
-            this.gameObject.GetComponent<RecieveColor>().istrigger = false;
+            this.gameObject.GetComponent<mixColorObj>().istrigger = false;
         }
     }
 }

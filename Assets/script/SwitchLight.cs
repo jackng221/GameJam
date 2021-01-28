@@ -17,28 +17,26 @@ public class SwitchLight : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R)) {
-            if (LightSource.GetComponent<ShootShphere>().temp != null) {
-                LightSource.GetComponent<ShootShphere>().temp.GetComponent<RecieveColor>().colorlist.Clear();
-                LightSource.GetComponent<ShootShphere>().temp.GetComponent<RecieveColor>().iscolor1on = false;
-                LightSource.GetComponent<ShootShphere>().temp.GetComponent<RecieveColor>().iscolor2on = false;
-            }
+            //if (LightSource.GetComponent<ShootShphere>().prevHitObj != null) {
+            //    LightSource.GetComponent<ShootShphere>().prevHitObj.GetComponent<mixColorObj>().receiveColor.;
+            //}
             lightstat++;
             lightstat = lightstat % 5;
             switch (lightstat) {
                 case 0:
-                    LightSource.GetComponent<ShootShphere>().owncolor = HideObject.LightColor.Black;
+                    LightSource.GetComponent<ShootShphere>().owncolor = ObjectManager.LightColor.Black;
                     break;
                 case 1:
-                    LightSource.GetComponent<ShootShphere>().owncolor = HideObject.LightColor.White;
+                    LightSource.GetComponent<ShootShphere>().owncolor = ObjectManager.LightColor.White;
                     break;
                 case 2:
-                    LightSource.GetComponent<ShootShphere>().owncolor = HideObject.LightColor.Magenta;
+                    LightSource.GetComponent<ShootShphere>().owncolor = ObjectManager.LightColor.Magenta;
                     break;
                 case 3:
-                    LightSource.GetComponent<ShootShphere>().owncolor = HideObject.LightColor.Cyan;
+                    LightSource.GetComponent<ShootShphere>().owncolor = ObjectManager.LightColor.Cyan;
                     break;
                 case 4:
-                    LightSource.GetComponent<ShootShphere>().owncolor = HideObject.LightColor.Yellow;
+                    LightSource.GetComponent<ShootShphere>().owncolor = ObjectManager.LightColor.Yellow;
                     break;
                 default:
                     break;
