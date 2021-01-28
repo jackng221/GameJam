@@ -36,33 +36,34 @@ public class ObjectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(prevColor != SetCull.currentcolor)
+        if (player.GetComponent<SetCull>().iscomplete == true)
         {
-            if (SetCull.currentcolor == LightColor.White)
+            if (prevColor != SetCull.currentcolor)
             {
-                for (int i = 0; i < PrimaryColorObjects.Count; i++)
+                if (SetCull.currentcolor == LightColor.White)
                 {
-                    PrimaryColorObjects[i].SetActive(true);
-                }
-                for (int i = 0; i < MixColorObjects.Count; i++)
-                {
-                    MixColorObjects[i].SetActive(true);
-                }
-            }
-            else
-            {
-                for (int i = 0; i < PrimaryColorObjects.Count; i++)
-                {
-                    if(PrimaryColorObjects[i].GetComponent<PrimaryColorObj>().ObjColor == SetCull.currentcolor)
+                    for (int i = 0; i < PrimaryColorObjects.Count; i++)
                     {
-                        PrimaryColorObjects[i].SetActive(false);
+                        PrimaryColorObjects[i].SetActive(true);
                     }
-                    else { PrimaryColorObjects[i].SetActive(true); }
+                    for (int i = 0; i < MixColorObjects.Count; i++)
+                    {
+                        MixColorObjects[i].SetActive(true);
+                    }
                 }
+                else
+                {
+                    for (int i = 0; i < PrimaryColorObjects.Count; i++)
+                    {
+                        if (PrimaryColorObjects[i].GetComponent<PrimaryColorObj>().ObjColor == SetCull.currentcolor)
+                        {
+                            PrimaryColorObjects[i].SetActive(false);
+                        }
+                        else { PrimaryColorObjects[i].SetActive(true); }
+                    }
+                }
+                prevColor = SetCull.currentcolor;
             }
-            prevColor = SetCull.currentcolor;
         }
-
-        
     }
 }

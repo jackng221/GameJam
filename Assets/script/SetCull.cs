@@ -13,7 +13,7 @@ public class SetCull : MonoBehaviour
     public int stat = 0;
     [SerializeField]
     Image filter;
-    bool iscomplete = true;
+    public bool iscomplete = true;
     public static ObjectManager.LightColor currentcolor = ObjectManager.LightColor.White;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class SetCull : MonoBehaviour
             if (stat == 0)
             {
                 currentcolor = ObjectManager.LightColor.White;
-                filter.color = new Color32(0, 0, 0, 0);
+                filter.color = new Color32(255, 255, 255, 0);
                 axis.transform.DOLocalRotate(new Vector3(0, 0, -90), 1f).OnComplete(() =>
                 {
                     iscomplete = true;

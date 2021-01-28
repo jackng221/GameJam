@@ -14,12 +14,13 @@ public class KeepObjectDisable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isenter == true && this.gameObject.GetComponent<mixColorObj>().istrigger == true) {
+        if (isenter == true && this.gameObject.GetComponent<mixColorObj>().istrigger == true && this.gameObject.GetComponent<mixColorObj>().colorCorrect == true)
+        {
             this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        }else
+        }
+        else
             this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
     }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player") {
