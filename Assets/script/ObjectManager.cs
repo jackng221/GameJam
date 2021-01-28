@@ -26,9 +26,9 @@ public class ObjectManager : MonoBehaviour
         {
             PrimaryColorObjects.Add(Obj.gameObject);
         }
-        foreach (mixColorObj Obj in mColorObj)
+        foreach (mixColorObj MObj in mColorObj)
         {
-            PrimaryColorObjects.Add(Obj.gameObject);
+            MixColorObjects.Add(MObj.gameObject);
         }
 
     }
