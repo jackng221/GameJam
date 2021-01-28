@@ -6,12 +6,20 @@ public class ShootShphere : MonoBehaviour
 {
     public bool haveme = false;
     public GameObject temp = null;
-    LayerMask mask;
+    LayerMask mask, layerMask;
     public HideObject.LightColor owncolor;
+    public bool selection = false;
+    public GameObject player, fire;
+    [SerializeField]
+    float speed = 1.0f;
+    float step;
     // Start is called before the first frame update
     void Start()
     {
         mask = LayerMask.GetMask("HideWord");
+        player = GameObject.FindGameObjectWithTag("Player");
+        fire = GameObject.FindGameObjectWithTag("Fire");
+        layerMask = LayerMask.GetMask("Invisible");
     }
 
     // Update is called once per frame
@@ -45,10 +53,10 @@ public class ShootShphere : MonoBehaviour
             default:
                 break;
         }
-        RaycastHit hit;
+        RaycastHit hit, hit2;
         Vector3 pos = this.gameObject.transform.position;
         
-        if (Physics.SphereCast(pos, this.gameObject.GetComponent<Light>().shadowRadius, transform.forward, out hit,10f)) {
+        if (Physics.SphereCast(pos, this.gameObject.GetComponent<Light>().shadowRadius, transform.forward, out hit,Mathf.Infinity)) {
             if (temp != hit.transform.gameObject && temp != null) {
                 if (temp.transform.tag == "HideWord")
                 {
@@ -130,6 +138,30 @@ public class ShootShphere : MonoBehaviour
                 }
             temp = null;
             haveme = false;
+        }
+        if (owncolor != HideObject.LightColor.Black) {
+            if (Physics.Raycast(pos, transform.forward, out hit2, Mathf.Infinity, layerMask))
+            {
+
+                if (hit2.transform.tag == "Fire")
+                {
+                    Debug.Log("Active");
+                    selection = true;
+                }
+                else
+                {
+                    Debug.Log("DisActive");
+                    selection = false;
+                }
+
+            }
+            else
+                selection = false;
+        }
+
+        if (selection == true) {
+            step = speed * Time.deltaTime;
+            fire.transform.position = Vector3.MoveTowards(fire.transform.position, new Vector3(player.transform.position.x, fire.transform.position.y, player.transform.position.z), step);
         }
     }
 
