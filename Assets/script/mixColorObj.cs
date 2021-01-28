@@ -7,8 +7,8 @@ public class mixColorObj : MonoBehaviour
     public ObjectManager.LightColor ObjColor;
     public ObjectManager.LightColor prevColor;
     public ObjectManager.LightColor receiveColor;
-    public ObjectManager.LightColor[] FilterColor = new ObjectManager.LightColor[2];
-    public ObjectManager.LightColor[] LightColor = new ObjectManager.LightColor[2];
+    public List<ObjectManager.LightColor> FilterColor = new List<ObjectManager.LightColor>();
+    public List<ObjectManager.LightColor> LightColor = new List<ObjectManager.LightColor>();
     public bool colorCorrect = false;
     [SerializeField]
     GameObject ActualGameObject;
@@ -21,22 +21,22 @@ public class mixColorObj : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         switch (ObjColor) {
             case ObjectManager.LightColor.Yellow:
-                FilterColor[0] = ObjectManager.LightColor.Green;
-                FilterColor[1] = ObjectManager.LightColor.Red;
-                LightColor[0] = ObjectManager.LightColor.Cyan;
-                LightColor[1] = ObjectManager.LightColor.Magenta;
+                FilterColor.Add(ObjectManager.LightColor.Green);
+                FilterColor.Add(ObjectManager.LightColor.Red);
+                LightColor.Add(ObjectManager.LightColor.Cyan);
+                LightColor.Add(ObjectManager.LightColor.Magenta);
                 break;
             case ObjectManager.LightColor.Magenta:
-                FilterColor[0] = ObjectManager.LightColor.Red;
-                FilterColor[1] = ObjectManager.LightColor.Blue;
-                LightColor[0] = ObjectManager.LightColor.Yellow;
-                LightColor[1] = ObjectManager.LightColor.Cyan;
+                FilterColor.Add(ObjectManager.LightColor.Red);
+                FilterColor.Add(ObjectManager.LightColor.Blue);
+                LightColor.Add(ObjectManager.LightColor.Yellow);
+                LightColor.Add(ObjectManager.LightColor.Cyan);
                 break;
             case ObjectManager.LightColor.Cyan:
-                FilterColor[0] = ObjectManager.LightColor.Green;
-                FilterColor[1] = ObjectManager.LightColor.Blue;
-                LightColor[0] = ObjectManager.LightColor.Magenta;
-                LightColor[1] = ObjectManager.LightColor.Yellow;
+                FilterColor.Add(ObjectManager.LightColor.Green);
+                FilterColor.Add(ObjectManager.LightColor.Blue);
+                LightColor.Add(ObjectManager.LightColor.Magenta);
+                LightColor.Add(ObjectManager.LightColor.Yellow);
                 break;
             default:
                 break;
