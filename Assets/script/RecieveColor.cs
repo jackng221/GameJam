@@ -64,15 +64,17 @@ public class RecieveColor : MonoBehaviour
         switch (this.gameObject.tag)
         {
             case "YellowObject":
-                    if((player.GetComponent<SetCull>().currentcolor != HideObject.LightColor.Red && iscolor2on != true) || (player.GetComponent<SetCull>().currentcolor != HideObject.LightColor.Green && iscolor1on != true))
+                if (!(player.GetComponent<SetCull>().currentcolor == HideObject.LightColor.Red && iscolor2on == true) && !(player.GetComponent<SetCull>().currentcolor == HideObject.LightColor.Green && iscolor1on == true) && istrigger!=true)
                     ActualGameObject.gameObject.SetActive(true);
+                else
+                    Debug.Log("Is Disappear");
                 break;
             case "MagentaObject":
-                if ((player.GetComponent<SetCull>().currentcolor != HideObject.LightColor.Red && iscolor1on != true) || (player.GetComponent<SetCull>().currentcolor != HideObject.LightColor.Blue && iscolor2on != true))
+                if (!(player.GetComponent<SetCull>().currentcolor == HideObject.LightColor.Red && iscolor1on == true) && !(player.GetComponent<SetCull>().currentcolor == HideObject.LightColor.Blue && iscolor2on == true) && istrigger != true)
                     ActualGameObject.gameObject.SetActive(true);
                 break;
             case "CyanObject":
-                if ((player.GetComponent<SetCull>().currentcolor != HideObject.LightColor.Green && iscolor2on != true) || (player.GetComponent<SetCull>().currentcolor != HideObject.LightColor.Blue && iscolor1on != true))
+                if (!(player.GetComponent<SetCull>().currentcolor == HideObject.LightColor.Green && iscolor2on == true) && !(player.GetComponent<SetCull>().currentcolor == HideObject.LightColor.Blue && iscolor1on == true) && istrigger != true)
                     ActualGameObject.gameObject.SetActive(true);
                 break;
             default:

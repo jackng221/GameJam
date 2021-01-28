@@ -70,118 +70,124 @@ public class ObjectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (player.GetComponent<SetCull>().stat) {
-            case 0:
-                for (int i = 0; i < RedObject.Count; i++) {
-                    RedObject[i].SetActive(true);
-                }
-                for (int i = 0; i < GreenObject.Count; i++)
-                {
-                    GreenObject[i].SetActive(true);
-                }
-                for (int i = 0; i < BlueObject.Count; i++)
-                {
-                    BlueObject[i].SetActive(true);
-                }
-                break;
-            case 1:
-                for (int i = 0; i < RedObject.Count; i++)
-                {
-                    RedObject[i].SetActive(false);
-                }
-                for (int i = 0; i < YellowObject.Count; i++)
-                {
-                    if (YellowObject[i].GetComponent<RecieveColor>().iscolor2on == true) {
-                        YellowObject[i].transform.GetChild(0).gameObject.SetActive(false);
-                        YellowObject[i].GetComponent<RecieveColor>().istrigger = true;
-                    }
-                }
-                for (int i = 0; i < MagentaObject.Count; i++)
-                {
-                    if (MagentaObject[i].GetComponent<RecieveColor>().iscolor1on == true)
+        if (player.GetComponent<SetCull>().iscomplete == true)
+        {
+            switch (player.GetComponent<SetCull>().stat)
+            {
+                case 0:
+                    for (int i = 0; i < RedObject.Count; i++)
                     {
-                        MagentaObject[i].transform.GetChild(0).gameObject.SetActive(false);
-                        MagentaObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        RedObject[i].SetActive(true);
                     }
-                }
-                for (int i = 0; i < MagentaObject.Count; i++)
-                {
-                    if (YellowObject[i].GetComponent<RecieveColor>().iscolor1on)
+                    for (int i = 0; i < GreenObject.Count; i++)
                     {
-                        YellowObject[i].SetActive(false);
+                        GreenObject[i].SetActive(true);
                     }
-                }
-                for (int i = 0; i < GreenObject.Count; i++)
-                {
-                    GreenObject[i].SetActive(true);
-                }
-                for (int i = 0; i < BlueObject.Count; i++)
-                {
-                    BlueObject[i].SetActive(true);
-                }
-                break;
-            case 2:
-                for (int i = 0; i < GreenObject.Count; i++)
-                {
-                    GreenObject[i].SetActive(false);
-                }
-                for (int i = 0; i < YellowObject.Count; i++)
-                {
-                    if (YellowObject[i].GetComponent<RecieveColor>().iscolor1on == true)
+                    for (int i = 0; i < BlueObject.Count; i++)
                     {
-                        YellowObject[i].transform.GetChild(0).gameObject.SetActive(false);
-                        YellowObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        BlueObject[i].SetActive(true);
                     }
-                }
-                for (int i = 0; i < CyanObject.Count; i++)
-                {
-                    if (CyanObject[i].GetComponent<RecieveColor>().iscolor2on == true)
+                    break;
+                case 1:
+                    for (int i = 0; i < RedObject.Count; i++)
                     {
-                        CyanObject[i].transform.GetChild(0).gameObject.SetActive(false);
-                        CyanObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        RedObject[i].SetActive(false);
                     }
-                }
-                for (int i = 0; i < RedObject.Count; i++)
-                {
-                    RedObject[i].SetActive(true);
-                }
-                for (int i = 0; i < BlueObject.Count; i++)
-                {
-                    BlueObject[i].SetActive(true);
-                }
-                break;
-            case 3:
-                for (int i = 0; i < BlueObject.Count; i++)
-                {
-                    BlueObject[i].SetActive(false);
-                }
-                for (int i = 0; i < CyanObject.Count; i++)
-                {
-                    if (CyanObject[i].GetComponent<RecieveColor>().iscolor1on == true)
+                    for (int i = 0; i < YellowObject.Count; i++)
                     {
-                        CyanObject[i].transform.GetChild(0).gameObject.SetActive(false);
-                        CyanObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        if (YellowObject[i].GetComponent<RecieveColor>().iscolor2on == true)
+                        {
+                            YellowObject[i].transform.GetChild(0).gameObject.SetActive(false);
+                            YellowObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        }
                     }
-                }
-                for (int i = 0; i < MagentaObject.Count; i++)
-                {
-                    if (MagentaObject[i].GetComponent<RecieveColor>().iscolor2on == true)
+                    for (int i = 0; i < MagentaObject.Count; i++)
                     {
-                        MagentaObject[i].transform.GetChild(0).gameObject.SetActive(false);
-                        MagentaObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        if (MagentaObject[i].GetComponent<RecieveColor>().iscolor1on == true)
+                        {
+                            MagentaObject[i].transform.GetChild(0).gameObject.SetActive(false);
+                            MagentaObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        }
                     }
-                }
-                for (int i = 0; i < GreenObject.Count; i++)
-                {
-                    GreenObject[i].SetActive(true);
-                }
-                for (int i = 0; i < RedObject.Count; i++)
-                {
-                    RedObject[i].SetActive(true);
-                }
-                break;
-            default:
-                break;
+                    for (int i = 0; i < MagentaObject.Count; i++)
+                    {
+                        if (YellowObject[i].GetComponent<RecieveColor>().iscolor1on)
+                        {
+                            YellowObject[i].SetActive(false);
+                        }
+                    }
+                    for (int i = 0; i < GreenObject.Count; i++)
+                    {
+                        GreenObject[i].SetActive(true);
+                    }
+                    for (int i = 0; i < BlueObject.Count; i++)
+                    {
+                        BlueObject[i].SetActive(true);
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < GreenObject.Count; i++)
+                    {
+                        GreenObject[i].SetActive(false);
+                    }
+                    for (int i = 0; i < YellowObject.Count; i++)
+                    {
+                        if (YellowObject[i].GetComponent<RecieveColor>().iscolor1on == true)
+                        {
+                            YellowObject[i].transform.GetChild(0).gameObject.SetActive(false);
+                            YellowObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        }
+                    }
+                    for (int i = 0; i < CyanObject.Count; i++)
+                    {
+                        if (CyanObject[i].GetComponent<RecieveColor>().iscolor2on == true)
+                        {
+                            CyanObject[i].transform.GetChild(0).gameObject.SetActive(false);
+                            CyanObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        }
+                    }
+                    for (int i = 0; i < RedObject.Count; i++)
+                    {
+                        RedObject[i].SetActive(true);
+                    }
+                    for (int i = 0; i < BlueObject.Count; i++)
+                    {
+                        BlueObject[i].SetActive(true);
+                    }
+                    break;
+                case 3:
+                    for (int i = 0; i < BlueObject.Count; i++)
+                    {
+                        BlueObject[i].SetActive(false);
+                    }
+                    for (int i = 0; i < CyanObject.Count; i++)
+                    {
+                        if (CyanObject[i].GetComponent<RecieveColor>().iscolor1on == true)
+                        {
+                            CyanObject[i].transform.GetChild(0).gameObject.SetActive(false);
+                            CyanObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        }
+                    }
+                    for (int i = 0; i < MagentaObject.Count; i++)
+                    {
+                        if (MagentaObject[i].GetComponent<RecieveColor>().iscolor2on == true)
+                        {
+                            MagentaObject[i].transform.GetChild(0).gameObject.SetActive(false);
+                            MagentaObject[i].GetComponent<RecieveColor>().istrigger = true;
+                        }
+                    }
+                    for (int i = 0; i < GreenObject.Count; i++)
+                    {
+                        GreenObject[i].SetActive(true);
+                    }
+                    for (int i = 0; i < RedObject.Count; i++)
+                    {
+                        RedObject[i].SetActive(true);
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

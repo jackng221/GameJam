@@ -70,6 +70,7 @@ public class ShootShphere : MonoBehaviour
                             temp.GetComponent<RecieveColor>().colorlist.Remove(temp.GetComponent<RecieveColor>().colorlist[i]);
                         }
                     }
+                    temp.GetComponent<RecieveColor>().istrigger = false;
                     temp.GetComponent<RecieveColor>().iscolor1on = false;
                     temp.GetComponent<RecieveColor>().iscolor2on = false;
                 }
@@ -124,6 +125,7 @@ public class ShootShphere : MonoBehaviour
                             temp.GetComponent<RecieveColor>().colorlist.Remove(temp.GetComponent<RecieveColor>().colorlist[i]);
                         }
                     }
+                    temp.GetComponent<RecieveColor>().istrigger = false;
                     temp.GetComponent<RecieveColor>().iscolor1on = false;
                     temp.GetComponent<RecieveColor>().iscolor2on = false;
                 }
