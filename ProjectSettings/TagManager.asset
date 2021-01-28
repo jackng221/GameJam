@@ -12,6 +12,7 @@ TagManager:
   - MagentaObject
   - CyanObject
   - YellowObject
+  - MovableFloor
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - MagentaObject
   - CyanObject
   - YellowObject
-  - 
+  - Invisible
   - 
   - 
   - 
