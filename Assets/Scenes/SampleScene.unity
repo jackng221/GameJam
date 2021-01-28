@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveme: 0
-  temp: {fileID: 0}
+  prevHitObj: {fileID: 0}
   owncolor: 1
 --- !u!108 &162776820
 Light:
@@ -448,7 +448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveme: 0
-  temp: {fileID: 0}
+  prevHitObj: {fileID: 0}
   owncolor: 1
 --- !u!108 &223052822
 Light:
@@ -781,6 +781,7 @@ GameObject:
   - component: {fileID: 443077446}
   - component: {fileID: 443077445}
   - component: {fileID: 443077444}
+  - component: {fileID: 443077447}
   m_Layer: 9
   m_Name: RedCube
   m_TagString: RedObject
@@ -862,6 +863,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443077442}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &443077447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443077442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540001962ed27de4081447b376c0cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjColor: 0
 --- !u!1 &496977621
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,6 +919,7 @@ GameObject:
   - component: {fileID: 523256015}
   - component: {fileID: 523256014}
   - component: {fileID: 523256013}
+  - component: {fileID: 523256016}
   m_Layer: 11
   m_Name: GreenCube
   m_TagString: GreenObject
@@ -986,6 +1001,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 523256011}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &523256016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 523256011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540001962ed27de4081447b376c0cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjColor: 2
 --- !u!1 &574453767
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,7 +1050,6 @@ MonoBehaviour:
   stat: 0
   filter: {fileID: 1397302697}
   iscomplete: 1
-  currentcolor: 6
 --- !u!81 &574453769
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1520,7 +1547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveme: 0
-  temp: {fileID: 0}
+  prevHitObj: {fileID: 0}
   owncolor: 0
 --- !u!1 &788261481
 GameObject:
@@ -1792,12 +1819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7307b5573fb748d4ebab4118d505847b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RedObject: []
-  GreenObject: []
-  BlueObject: []
-  MagentaObject: []
-  CyanObject: []
-  YellowObject: []
+  PrimaryColorObjects: []
+  MixColorObjects: []
   player: {fileID: 6881632251459722900}
 --- !u!4 &955864382
 Transform:
@@ -1904,10 +1927,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2eb7275bb6f4dc4fac572c3c59df15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideset: {fileID: 957437696}
+  hideGobj: {fileID: 0}
   ap: 0
   isstart_fadeout: 0
-  isstart_fadein: 0
   Minus: 5
   Plus: 5
 --- !u!1 &1316788928
@@ -2340,11 +2362,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45bc5f9cf85f3b440bded8765daa7946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorlist: 
-  wanted: 0
-  wanted2: 0
-  iscolor1on: 0
-  iscolor2on: 0
+  ObjColor: 5
+  prevColor: 0
+  receiveColor: 0
+  FilterColor: 0000000000000000
+  LightColor: 0000000000000000
+  colorCorrect: 0
   ActualGameObject: {fileID: 1316788928}
   istrigger: 0
 --- !u!65 &1522480882
@@ -2625,6 +2648,7 @@ GameObject:
   - component: {fileID: 1933019698}
   - component: {fileID: 1933019697}
   - component: {fileID: 1933019696}
+  - component: {fileID: 1933019699}
   m_Layer: 10
   m_Name: BlueCube
   m_TagString: BlueObject
@@ -2706,6 +2730,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933019694}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1933019699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933019694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 540001962ed27de4081447b376c0cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjColor: 1
 --- !u!1 &2023796695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,10 +2926,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2eb7275bb6f4dc4fac572c3c59df15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideset: {fileID: 2034256064}
+  hideGobj: {fileID: 0}
   ap: 0
   isstart_fadeout: 0
-  isstart_fadein: 0
   Minus: 5
   Plus: 5
 --- !u!1 &2081433689
@@ -3074,7 +3110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   haveme: 0
-  temp: {fileID: 0}
+  prevHitObj: {fileID: 0}
   owncolor: 7
 --- !u!114 &3723029898112039408
 MonoBehaviour:
@@ -3503,7 +3539,6 @@ MonoBehaviour:
   stat: 0
   filter: {fileID: 1397302697}
   iscomplete: 1
-  currentcolor: 6
 --- !u!114 &6881632251459722903
 MonoBehaviour:
   m_ObjectHideFlags: 0
