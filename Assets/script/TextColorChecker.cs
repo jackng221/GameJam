@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class TextColorChecker : MonoBehaviour
 {
     [SerializeField]
-    ObjectManager.LightColor TargetColor, Recieved;
+    public ObjectManager.LightColor TargetColor, Recieved;
     [SerializeField]
-    ObjectManager.LightColor currentcolor;
+    public ObjectManager.LightColor currentcolor;
     public bool isFulfil = false;
     // Start is called before the first frame update
     void Start()
@@ -74,9 +74,17 @@ public class TextColorChecker : MonoBehaviour
             default:
                 break;
         }
-        if (Recieved == TargetColor) {
-            isFulfil = true;
+        if (isFulfil == false)
+        {
+            if (Recieved == TargetColor)
+            {
+                isFulfil = true;
+
+            }
+            else
+            {
+                isFulfil = false;
+            }
         }
-        
     }
 }

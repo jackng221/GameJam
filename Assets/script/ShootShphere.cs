@@ -102,6 +102,10 @@ public class ShootShphere : MonoBehaviour
                     prevHitObj.GetComponent<mixColorObj>().receiveColor = owncolor;
                 }
             }
+
+            if (hit.transform.tag == "Finish") {
+                hit.transform.GetComponent<TextColorChecker>().Recieved = owncolor;
+            }
         }
         else if (prevHitObj != null)
         {
