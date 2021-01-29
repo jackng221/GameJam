@@ -7,13 +7,13 @@ using DG.Tweening;
 public class SetCull : MonoBehaviour
 {
     [SerializeField]
-    GameObject cam;
+    GameObject cam, LightFlash, Filter, paper1, paper2;
     [SerializeField]
     GameObject axis;
     public int stat = 0;
     [SerializeField]
     Image filter;
-    public bool iscomplete = true;
+    public bool iscomplete = true, isgetLight = false, isgetpaper1 = false, isgetpaper2 = false, isgetfilter = false;
     public static ObjectManager.LightColor currentcolor = ObjectManager.LightColor.White;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,22 @@ public class SetCull : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isgetLight == true)
+        {
+            LightFlash.gameObject.SetActive(true);
+        }
+        if (isgetpaper1 == true && Input.GetKeyDown(KeyCode.P))
+        {
+            paper1.gameObject.SetActive(true);
+        }
+        if (isgetpaper2 == true)
+        {
+            paper2.gameObject.SetActive(true);
+        }
+        if (isgetfilter == true)
+        {
+            filter.gameObject.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.E) && iscomplete == true) {
             iscomplete = false;
             stat += 1;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FPSMovement : MonoBehaviour
 {
+
     public CharacterController controller;
     public Transform groundCheck;
     float x;
@@ -25,6 +26,7 @@ public class FPSMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
