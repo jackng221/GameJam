@@ -35,6 +35,8 @@ public class GetFlashAndPaper1 : MonoBehaviour
             Dialog.GetComponent<TextControl>().text.Add("This is....?");
             Dialog.GetComponent<TextControl>().text.Add("A LightFlash and ....What? A paper?");
             Dialog.gameObject.SetActive(true);
+            conversate.SetActive(false);
+            hint.SetActive(false);
         }
     }
 
@@ -43,8 +45,11 @@ public class GetFlashAndPaper1 : MonoBehaviour
         if (other.transform.tag == "Player")
         {
             player = other.transform.gameObject;
-            hint.SetActive(true);
-            conversate.SetActive(true);
+            if (Dialog.gameObject.activeInHierarchy != true)
+            {
+                hint.SetActive(true);
+                conversate.SetActive(true);
+            }
             isenter = true;
         }
     }

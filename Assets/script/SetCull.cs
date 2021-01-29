@@ -7,7 +7,7 @@ using DG.Tweening;
 public class SetCull : MonoBehaviour
 {
     [SerializeField]
-    GameObject cam, LightFlash, Filter, paper1, paper2;
+    GameObject cam, LightFlash, Filter, paper1, paper2, blur;
     [SerializeField]
     GameObject axis;
     public int stat = 0;
@@ -15,6 +15,7 @@ public class SetCull : MonoBehaviour
     Image filter;
     public bool iscomplete = true, isgetLight = false, isgetpaper1 = false, isgetpaper2 = false, isgetfilter = false;
     public static ObjectManager.LightColor currentcolor = ObjectManager.LightColor.White;
+    int countpaper1 = 0, countpaper2= 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +29,31 @@ public class SetCull : MonoBehaviour
         {
             LightFlash.gameObject.SetActive(true);
         }
-        if (isgetpaper1 == true && Input.GetKeyDown(KeyCode.P))
+        if (isgetpaper1 == true && Input.GetKeyDown(KeyCode.P) && paper2.activeInHierarchy != true)
         {
-            paper1.gameObject.SetActive(true);
+            if (paper1.activeInHierarchy)
+            {
+                blur.gameObject.SetActive(false);
+                paper1.gameObject.SetActive(false);
+            }
+            else {
+                blur.gameObject.SetActive(true);
+                paper1.gameObject.SetActive(true);
+            }
+            
         }
-        if (isgetpaper2 == true)
+        if (isgetpaper2 == true && Input.GetKeyDown(KeyCode.O) && paper1.activeInHierarchy != true)
         {
-            paper2.gameObject.SetActive(true);
+            if (paper2.activeInHierarchy)
+            {
+                blur.gameObject.SetActive(false);
+                paper2.gameObject.SetActive(false);
+            }
+            else
+            {
+                blur.gameObject.SetActive(true);
+                paper2.gameObject.SetActive(true);
+            }
         }
         if (isgetfilter == true)
         {

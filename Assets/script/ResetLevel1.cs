@@ -36,14 +36,19 @@ public class ResetLevel1 : MonoBehaviour
             Dialog.GetComponent<TextControl>().text.Add("What is this?");
             Dialog.GetComponent<TextControl>().text.Add("This look like a button...?"); 
             Dialog.gameObject.SetActive(true);
+            conversate.SetActive(false);
+            hint.SetActive(false);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player") {
-            hint.SetActive(true);
-            conversate.SetActive(true);
+            if (Dialog.gameObject.activeInHierarchy != true)
+            {
+                hint.SetActive(true);
+                conversate.SetActive(true);
+            }
             isenter = true;
         }
     }

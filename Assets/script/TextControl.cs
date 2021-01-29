@@ -65,17 +65,19 @@ public class TextControl : MonoBehaviour
                 textfield.text = "";
         }
 
-
-        if (pointer < text[pressed].Length)
+        if (text.Count != 0)
         {
-            frame++;
-            if (frame % 2 == 0)
+            if (pointer < text[pressed].Length)
             {
-                textfield.text += text[pressed][pointer];
-                pointer++;
+                frame++;
+                if (frame % 2 == 0)
+                {
+                    textfield.text += text[pressed][pointer];
+                    pointer++;
+                }
             }
+            else
+                hintcontinue.gameObject.SetActive(true);
         }
-        else
-            hintcontinue.gameObject.SetActive(true);
     }
 }
