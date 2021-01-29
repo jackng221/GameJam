@@ -7,7 +7,7 @@ using DG.Tweening;
 public class SetCull : MonoBehaviour
 {
     [SerializeField]
-    GameObject cam, LightFlash, Filter, paper1, paper2, blur;
+    GameObject cam, FlashLight, FlashLightRepresent, Filter, paper1, paper2, blur;
     [SerializeField]
     GameObject axis;
     public int stat = 0;
@@ -27,7 +27,8 @@ public class SetCull : MonoBehaviour
     {
         if (isgetLight == true)
         {
-            LightFlash.gameObject.SetActive(true);
+            FlashLight.gameObject.SetActive(true);
+            FlashLightRepresent.gameObject.SetActive(true);
         }
         if (isgetpaper1 == true && Input.GetKeyDown(KeyCode.P) && paper2.activeInHierarchy != true)
         {
