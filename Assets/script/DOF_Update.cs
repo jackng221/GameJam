@@ -14,7 +14,7 @@ public class DOF_Update : MonoBehaviour
         postProcessVolume = GetComponent<PostProcessVolume>();
 
     }
-    void Update()
+    void FixedUpdate()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit))
@@ -28,8 +28,13 @@ public class DOF_Update : MonoBehaviour
         if (postProcessVolume)
         {
             if (postProcessVolume.sharedProfile.TryGetSettings<DepthOfField>(out dof)){
-                dof.focusDistance.value = Mathf.Lerp(dof.focusDistance.value, currentHitDistance, Time.deltaTime * 1.5f);
+                dof.focusDistance.value = Mathf.Lerp(dof.focusDistance.value, currentHitDistance, Time.deltaTime * 3f);
+                //Debug.Log(currentHitDistance);
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Debug.DrawLine(transform.position, transform.position + transform.forward * currentHitDistance);
     }
 }
