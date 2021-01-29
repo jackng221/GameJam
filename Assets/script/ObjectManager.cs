@@ -7,7 +7,7 @@ public class ObjectManager : MonoBehaviour
     public enum LightColor
     {
 
-        Red = 0, Blue, Green, Magenta, Cyan, Yellow, White, Black
+        Red = 1, Green = 2, Blue = 4, Magenta, Cyan, Yellow, White, Black
     };
 
     public List<GameObject> PrimaryColorObjects = new List<GameObject>();
