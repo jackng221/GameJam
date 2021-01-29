@@ -25,36 +25,33 @@ public class FPSMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        
-            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-            if (isGrounded && velocity.y < 0)
-            {
-                velocity.y = -2f;
-            }
-            x = Input.GetAxis("Horizontal");
-            z = Input.GetAxis("Vertical");
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
 
-            move = transform.right * x + transform.forward * z;
-            if (ismenuopen == false)
-            {
-                controller.Move(move * speed * Time.deltaTime);
-            }
-            velocity.y += gravity * Time.deltaTime;
-            controller.Move(velocity * Time.deltaTime);
+        move = transform.right * x + transform.forward * z;
+        if (ismenuopen == false)
+        {
+            controller.Move(move * speed * Time.deltaTime);
+        }
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
 
-            if (Input.GetKeyDown("escape") || ismenuopen == true)
-            {
-            //turn on the cursor
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.None;
-            }
-            if (ismenuopen == false) {
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-        
+        if (Input.GetKeyDown("escape") || ismenuopen == true)
+        {
+        //turn on the cursor
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        if (ismenuopen == false) {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     public void SetIsMenuOpenFalse() {
