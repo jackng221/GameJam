@@ -43,6 +43,7 @@ public class TextControl : MonoBehaviour
     {
         if (this.gameObject.activeInHierarchy) {
             Blur.gameObject.SetActive(true);
+
         }
         if (Input.GetKeyDown(KeyCode.C)) {
                 if (pressed < (text.Count - 1))
@@ -56,7 +57,7 @@ public class TextControl : MonoBehaviour
                     frame = 0;
                     pressed = 0;
                     text.Clear();
-                    Blur.gameObject.SetActive(true);
+                    Blur.gameObject.SetActive(false);
                 }
                 hintcontinue.gameObject.SetActive(false);
                 hintcontinue.color = new Color32(50, 50, 50, 255);
