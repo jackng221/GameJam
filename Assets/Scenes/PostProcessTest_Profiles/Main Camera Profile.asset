@@ -1326,9 +1326,9 @@ MonoBehaviour:
   settings:
   - {fileID: 3120177488040999480}
   - {fileID: 1277614164144108344}
-  - {fileID: 297063783602735925}
+  - {fileID: 464001512044230389}
   - {fileID: -6230616298045579877}
---- !u!114 &297063783602735925
+--- !u!114 &464001512044230389
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1346,16 +1346,16 @@ MonoBehaviour:
     value: 1
   focusDistance:
     overrideState: 1
-    value: 9.577528
+    value: 9.871705
   aperture:
     overrideState: 1
     value: 2.7
   focalLength:
     overrideState: 1
-    value: 40
+    value: 27
   kernelSize:
     overrideState: 0
-    value: 3
+    value: 1
 --- !u!114 &1277614164144108344
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1368,7 +1368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   enabled:
     overrideState: 1
     value: 1
