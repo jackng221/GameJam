@@ -16,6 +16,8 @@ public class TextControl : MonoBehaviour
     GameObject DialogCanvas, Blur;
     [SerializeField]
     int Switch = 0;
+    [SerializeField]
+    AudioSource typing;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,7 @@ public class TextControl : MonoBehaviour
                 if (frame % 2 == 0)
                 {
                     textfield.text += text[pressed][pointer];
+                    typing.Play();
                     pointer++;
                 }
             }

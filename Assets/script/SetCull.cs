@@ -16,6 +16,8 @@ public class SetCull : MonoBehaviour
     public bool iscomplete = true, isgetLight = false, isgetpaper1 = false, isgetpaper2 = false, isgetfilter = false;
     public static ObjectManager.LightColor currentcolor = ObjectManager.LightColor.White;
     int countpaper1 = 0, countpaper2= 0;
+    [SerializeField]
+    AudioSource WearGlass;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +63,7 @@ public class SetCull : MonoBehaviour
             filter.gameObject.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.E) && iscomplete == true) {
+            WearGlass.Play();
             iscomplete = false;
             stat += 1;
             stat = stat % 4;
