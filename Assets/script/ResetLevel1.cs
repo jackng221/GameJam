@@ -44,7 +44,7 @@ public class ResetLevel1 : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player") {
-            if (Dialog.gameObject.activeInHierarchy != true)
+            if (Dialog.gameObject.activeInHierarchy == false)
             {
                 hint.SetActive(true);
                 conversate.SetActive(true);
