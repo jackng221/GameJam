@@ -8,10 +8,11 @@ public class ResetLevel1 : MonoBehaviour
     [SerializeField]
     GameObject GameManager, Dialog, hint, conversate;
     bool istrue = false;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -29,7 +30,7 @@ public class ResetLevel1 : MonoBehaviour
             GameManager.GetComponent<Level1Manager>().win[2].GetComponent<TextColorChecker>().isFulfil = false;
             istrue = false;
         }
-        if (isenter == true && Input.GetKeyDown(KeyCode.C) && Dialog.gameObject.activeInHierarchy != true)
+        if (isenter == true && Input.GetKeyDown(KeyCode.C) && Dialog.gameObject.activeInHierarchy != true && player.GetComponent<FPSMovement>().ischanging ==false)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<FPSMovement>().ismenuopen = true;
 

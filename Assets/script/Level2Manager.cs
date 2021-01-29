@@ -20,6 +20,8 @@ public class Level2Manager : MonoBehaviour
     [SerializeField]
     Transform nextLevelStartPoint;
     public bool winLevel2 = false;
+    [SerializeField]
+    AudioSource unlock;
 
     // Start is called before the first frame update
     void Start()
@@ -74,6 +76,8 @@ public class Level2Manager : MonoBehaviour
 
     public void WinLevel2()
     {
-        player.transform.position = nextLevelStartPoint.position;
+        //player.transform.position = nextLevelStartPoint.position;
+        winLevel2 = true;
+        unlock.Play();
     }
 }

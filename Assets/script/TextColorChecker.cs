@@ -85,6 +85,9 @@ public class TextColorChecker : MonoBehaviour
             {
                 isFulfil = false;
             }
+            if (currentcolor == TargetColor) {
+                isFulfil = true;
+            }
         }
     }
 }

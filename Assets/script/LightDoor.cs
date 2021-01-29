@@ -20,9 +20,9 @@ public class LightDoor : MonoBehaviour
     {
         if (other.CompareTag("Fire"))
         {
-            if (Level2Manager.Instanse.winLevel2)
+            if (GameObject.Find("ObjectManager"))
             {
-                Level2Manager.Instanse.WinLevel2();
+                GameObject.Find("ObjectManager").GetComponent<Level2Manager>().WinLevel2();
             }
 
         }

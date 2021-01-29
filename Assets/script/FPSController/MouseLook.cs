@@ -26,7 +26,7 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Player.gameObject.GetComponent<FPSMovement>().ismenuopen == false))
+        if ((Player.gameObject.GetComponent<FPSMovement>().ismenuopen == false) && (Player.gameObject.GetComponent<FPSMovement>().ischanging == false))
         {
             mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;

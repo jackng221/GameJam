@@ -9,7 +9,10 @@ public class Level1Manager : MonoBehaviour
     public GameObject[] win = new GameObject[3];
     [SerializeField]
     public Text[] threetext = new Text[3];
-    bool Level1iswin = false;
+    public bool Level1iswin = false;
+    public bool once = false;
+    [SerializeField]
+    AudioSource unlock;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,8 +46,9 @@ public class Level1Manager : MonoBehaviour
         if (win[0].GetComponent<TextColorChecker>().isFulfil == true && win[2].GetComponent<TextColorChecker>().isFulfil == true && win[1].GetComponent<TextColorChecker>().isFulfil == true) {
             Level1iswin = true;
         }
-        if (Level1iswin) {
-            Debug.Log("You Win");
+        if (Level1iswin && once == false) {
+            once = true;
+            unlock.Play();
         }
     }
 }

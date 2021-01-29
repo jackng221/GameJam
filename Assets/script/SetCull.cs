@@ -7,7 +7,7 @@ using DG.Tweening;
 public class SetCull : MonoBehaviour
 {
     [SerializeField]
-    GameObject cam, FlashLight, FlashLightRepresent, Filter, paper1, paper2, blur;
+    GameObject cam, FlashLight, FlashLightRepresent, Filter, paper1, paper2, blur, Hintpaper1;
     [SerializeField]
     GameObject axis;
     public int stat = 0;
@@ -32,6 +32,9 @@ public class SetCull : MonoBehaviour
             FlashLight.gameObject.SetActive(true);
             FlashLightRepresent.gameObject.SetActive(true);
         }
+        if (isgetpaper1 == true) {
+
+        }
         if (isgetpaper1 == true && Input.GetKeyDown(KeyCode.P) && paper2.activeInHierarchy != true)
         {
             if (paper1.activeInHierarchy)
@@ -45,7 +48,7 @@ public class SetCull : MonoBehaviour
             }
             
         }
-        if (isgetpaper2 == true && Input.GetKeyDown(KeyCode.O) && paper1.activeInHierarchy != true)
+        if (isgetpaper2 == true && Input.GetKeyDown(KeyCode.K) && paper1.activeInHierarchy != true)
         {
             if (paper2.activeInHierarchy)
             {
@@ -62,7 +65,7 @@ public class SetCull : MonoBehaviour
         {
             filter.gameObject.SetActive(true);
         }
-        if (Input.GetKeyDown(KeyCode.E) && iscomplete == true) {
+        if (Input.GetKeyDown(KeyCode.E) && iscomplete == true && isgetfilter == true) {
             WearGlass.Play();
             iscomplete = false;
             stat += 1;

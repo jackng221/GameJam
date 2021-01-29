@@ -20,7 +20,7 @@ public class FPSMovement : MonoBehaviour
     [SerializeField]
     AudioSource walksound, walksound2;
     int frame = 0;
-
+    public bool ischanging = false;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +42,7 @@ public class FPSMovement : MonoBehaviour
         z = Input.GetAxis("Vertical");
 
         move = transform.right * x + transform.forward * z;
-        if (ismenuopen == false)
+        if (ismenuopen == false && ischanging == false)
         {
             controller.Move(move * speed * Time.deltaTime);
         }

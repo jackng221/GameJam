@@ -7,6 +7,8 @@ public class SwitchLight : MonoBehaviour
     int lightstat = 0;
     [SerializeField]
     GameObject LightSource;
+    [SerializeField]
+    AudioSource click;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,10 +18,11 @@ public class SwitchLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) {
+        if (Input.GetKeyDown(KeyCode.R) && GameObject.FindGameObjectWithTag("Player").GetComponent<SetCull>().isgetLight == true) {
             //if (LightSource.GetComponent<ShootShphere>().prevHitObj != null) {
             //    LightSource.GetComponent<ShootShphere>().prevHitObj.GetComponent<mixColorObj>().receiveColor.;
             //}
+            click.Play();
             lightstat++;
             lightstat = lightstat % 5;
             switch (lightstat) {

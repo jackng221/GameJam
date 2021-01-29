@@ -8,17 +8,18 @@ public class PlayerEnter : MonoBehaviour
     List<string> input = new List<string>();
     bool isenter = false;
     [SerializeField]
-    GameObject Dialog, conversate;
+    public GameObject Dialog, conversate;
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isenter == true && Input.GetKeyDown(KeyCode.C) && Dialog.gameObject.activeInHierarchy != true)
+        if (isenter == true && Input.GetKeyDown(KeyCode.C) && Dialog.gameObject.activeInHierarchy != true && player.GetComponent<FPSMovement>().ischanging == false)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<FPSMovement>().ismenuopen = true;
             for (int i = 0; i < input.Count; i++)
