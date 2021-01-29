@@ -17,6 +17,9 @@ public class FPSMovement : MonoBehaviour
     public LayerMask groundMask;
     bool isGrounded;
     public bool ismenuopen = false;
+    [SerializeField]
+    AudioSource walksound, walksound2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +46,9 @@ public class FPSMovement : MonoBehaviour
         }
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
-
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D)) {
+            walksound.Play();
+        }
         if (Input.GetKeyDown("escape") || ismenuopen == true)
         {
         //turn on the cursor
