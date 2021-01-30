@@ -13,6 +13,8 @@ public class Level1Manager : MonoBehaviour
     public bool once = false;
     [SerializeField]
     AudioSource unlock;
+    [SerializeField]
+    GameObject resetbtn;
 
     Material mat;
     [SerializeField] float speed = 0.15f;
@@ -47,7 +49,8 @@ public class Level1Manager : MonoBehaviour
             threetext[2].color = new Color32(0, 255, 0, 90);
 
 
-        if (win[0].GetComponent<TextColorChecker>().isFulfil == true && win[2].GetComponent<TextColorChecker>().isFulfil == true && win[1].GetComponent<TextColorChecker>().isFulfil == true) {
+        if (win[0].GetComponent<TextColorChecker>().isFulfil == true && win[2].GetComponent<TextColorChecker>().isFulfil == true && win[1].GetComponent<TextColorChecker>().isFulfil == true)
+        {
             //Dissolve door
             if (mat.GetFloat("_DissolveAmount") < 1)
             {
@@ -57,7 +60,10 @@ public class Level1Manager : MonoBehaviour
 
             Level1iswin = true;
         }
+        else
+            Level1iswin = false;
         if (Level1iswin && once == false) {
+            resetbtn.SetActive(false);
             once = true;
             unlock.Play();
         }

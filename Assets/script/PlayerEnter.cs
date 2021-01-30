@@ -13,7 +13,7 @@ public class PlayerEnter : MonoBehaviour
     public GameObject Dialog, conversate, lv1manager, objectmanager;
     GameObject player;
     [SerializeField]
-    int isdoor = 0, iswall= 0;
+    int isdoor = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +23,6 @@ public class PlayerEnter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (iswall == 1 && this.gameObject.transform.GetChild(0).gameObject.activeInHierarchy == true) { 
             if (isenter == true && Input.GetKeyDown(KeyCode.C) && Dialog.gameObject.activeInHierarchy != true && player.GetComponent<FPSMovement>().ischanging == false && isdoor == 0)
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<FPSMovement>().ismenuopen = true;
@@ -75,17 +74,13 @@ public class PlayerEnter : MonoBehaviour
 
             }
          }
-    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
         {
-            if (Dialog.gameObject.activeInHierarchy == false && iswall == 0)
+            if (Dialog.gameObject.activeInHierarchy == false)
             {
-                conversate.SetActive(true);
-            }
-            else if (Dialog.gameObject.activeInHierarchy == false && iswall == 1 && this.gameObject.transform.GetChild(0).gameObject.activeInHierarchy == true) {
                 conversate.SetActive(true);
             }
             isenter = true;

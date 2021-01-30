@@ -11,10 +11,12 @@ public class SpotController : MonoBehaviour
     bool hitObect = false;
     [SerializeField]
     public GameObject lightsource;
+    LayerMask mask;
     // Start is called before the first frame update
     void Start()
     {
         navMeshPath = new NavMeshPath();
+        mask = LayerMask.GetMask("maze");
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class SpotController : MonoBehaviour
                 Ray ray = new Ray(lightsource.transform.position, lightsource.transform.forward);
                 RaycastHit hit;
             
-                if (Physics.Raycast(ray, out hit))
+                if (Physics.Raycast(ray, out hit, mask))
                 {
                     Debug.Log(hit.transform.name);
                     if (hit.transform.CompareTag("MovableFloor"))

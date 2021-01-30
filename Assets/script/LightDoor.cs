@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.AI;
+using DG.Tweening;
 
 
 public class LightDoor : MonoBehaviour
@@ -30,6 +32,8 @@ public class LightDoor : MonoBehaviour
             if (GameObject.Find("ObjectManager"))
             {
                 GameObject.Find("ObjectManager").GetComponent<Level2Manager>().WinLevel2();
+                other.GetComponent<NavMeshAgent>().enabled = false;
+                other.gameObject.transform.DOMove(this.gameObject.transform.position, 1f);
             }
 
         }
