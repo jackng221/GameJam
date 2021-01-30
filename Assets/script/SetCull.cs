@@ -7,7 +7,7 @@ using DG.Tweening;
 public class SetCull : MonoBehaviour
 {
     [SerializeField]
-    GameObject cam, FlashLight, FlashLightRepresent, Filter, paper1, blur, Hintpaper1;
+    GameObject cam, FlashLight, FlashLightRepresent, Filter, paper1, blur, Hintpaper1, hintfilter;
     [SerializeField]
     GameObject axis;
     public int stat = 0;
@@ -36,6 +36,10 @@ public class SetCull : MonoBehaviour
         {
             FlashLightRepresent.gameObject.SetActive(true);
             Hintpaper1.gameObject.SetActive(true);
+            if (isgetfilter == true) {
+                hintfilter.SetActive(true);
+            }else
+                hintfilter.SetActive(false);
         }
         else
         {
@@ -64,6 +68,7 @@ public class SetCull : MonoBehaviour
         if (isgetfilter == true)
         {
             Filter.gameObject.SetActive(true);
+
         }
         if (Input.GetKeyDown(KeyCode.E) && iscomplete == true && isgetfilter == true) {
             WearGlass.Play();
