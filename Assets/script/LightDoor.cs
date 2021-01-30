@@ -40,7 +40,7 @@ public class LightDoor : MonoBehaviour
         if (other.CompareTag("Fire"))
         {
             clearText.color = new Color32(255, 255, 255, 90);
-            this.gameObject.GetComponent<Material>().color = new Color32(0, 0, 0, 255);
+            this.gameObject.GetComponent<Renderer>().material.color = new Color32(0, 0, 0, 255);
             if (GameObject.Find("ObjectManager"))
             {
                 GameObject.Find("ObjectManager").GetComponent<Level2Manager>().winLevel2 = false;

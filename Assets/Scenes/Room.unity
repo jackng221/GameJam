@@ -20826,7 +20826,7 @@ GameObject:
   - component: {fileID: 2450406240924028303}
   m_Layer: 8
   m_Name: Spotlight_cookie2
-  m_TagString: Untagged
+  m_TagString: Flashlight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

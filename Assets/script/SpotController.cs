@@ -20,23 +20,26 @@ public class SpotController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if(Physics.Raycast(ray, out hit))
+            if (GameObject.FindGameObjectWithTag("Flashlight").GetComponent<ShootShphere>().owncolor != ObjectManager.LightColor.Black)
             {
-                Debug.Log(hit.transform.name);
-                if (hit.transform.CompareTag("MovableFloor"))
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            
+                if (Physics.Raycast(ray, out hit))
                 {
-                    targetPosition = hit.point;
+                    Debug.Log(hit.transform.name);
+                    if (hit.transform.CompareTag("MovableFloor"))
+                    {
+                        targetPosition = hit.point;
 
-                    if (checkPath())
-                    {
-                        Agent.SetDestination(targetPosition);
-                    }
-                    else
-                    {
-                        Agent.SetDestination(this.transform.position);
+                        if (checkPath())
+                        {
+                            Agent.SetDestination(targetPosition);
+                        }
+                        else
+                        {
+                            Agent.SetDestination(this.transform.position);
+                        }
                     }
                 }
             }
