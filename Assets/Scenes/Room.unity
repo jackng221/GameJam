@@ -3636,6 +3636,12 @@ Transform:
   m_Father: {fileID: 1579412165}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &902531740 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8401966204981328119, guid: 3b8f512eba522ff428d77739ea21fade,
+    type: 3}
+  m_PrefabInstance: {fileID: 3696966067346508744}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &927315290
 GameObject:
   m_ObjectHideFlags: 0
@@ -3943,7 +3949,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1106586607
 Transform:
   m_ObjectHideFlags: 0
@@ -4065,7 +4071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1146288314
 Transform:
   m_ObjectHideFlags: 0
@@ -6078,7 +6084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1800849441
 Transform:
   m_ObjectHideFlags: 0
@@ -18660,8 +18666,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2745366, y: 1, z: 1}
-  m_Center: {x: 0.054851547, y: 0, z: 0}
+  m_Size: {x: 1.766808, y: 1, z: 1}
+  m_Center: {x: 2.5497115, y: 0, z: 0}
 --- !u!65 &2197635341867275035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18673,8 +18679,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2745366, y: 1, z: 1}
-  m_Center: {x: 0.054851547, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2197635341867275037
 Transform:
   m_ObjectHideFlags: 0
@@ -18754,8 +18760,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2745366, y: 1, z: 1}
-  m_Center: {x: 0.054851547, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2197635341915499222
 Transform:
   m_ObjectHideFlags: 0
@@ -20795,8 +20801,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2745366, y: 1, z: 1}
-  m_Center: {x: 0.054851547, y: 0, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2660267832712766966
 Transform:
   m_ObjectHideFlags: 0
@@ -25163,6 +25169,11 @@ PrefabInstance:
       propertyPath: GameEndBGM
       value: 
       objectReference: {fileID: 459521942}
+    - target: {fileID: 7502153399924483838, guid: 3b8f512eba522ff428d77739ea21fade,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7502153399924483839, guid: 3b8f512eba522ff428d77739ea21fade,
         type: 3}
       propertyPath: Dialog
@@ -40478,7 +40489,9 @@ MonoBehaviour:
   LightDoor: {fileID: 1248757420}
   nextLevelStartPoint: {fileID: 0}
   winLevel2: 0
-  unlock: {fileID: 0}
+  unlock: {fileID: 1529450468}
+  speed: 0.15
+  exitDoor: {fileID: 902531740}
 --- !u!1 &8911324782351313033
 GameObject:
   m_ObjectHideFlags: 0
