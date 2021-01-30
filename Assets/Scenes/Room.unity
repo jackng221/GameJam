@@ -5624,6 +5624,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3972510287478352594, guid: ed9930ba4e47408469ccf9e4f5a9e490,
+        type: 3}
+      propertyPath: lightsource
+      value: 
+      objectReference: {fileID: 2450406240924028305}
     - target: {fileID: 6309225073858045260, guid: ed9930ba4e47408469ccf9e4f5a9e490,
         type: 3}
       propertyPath: m_Name
