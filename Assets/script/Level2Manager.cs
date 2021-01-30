@@ -23,9 +23,14 @@ public class Level2Manager : MonoBehaviour
     [SerializeField]
     AudioSource unlock;
 
+    Material mat;
+    [SerializeField] float speed = 0.15f;
+    public GameObject exitDoor;
+
     // Start is called before the first frame update
     void Start()
     {
+        mat = exitDoor.GetComponent<Renderer>().material;
     }
 
     private void Awake()
@@ -71,7 +76,15 @@ public class Level2Manager : MonoBehaviour
             prevColor = color;
         }*/
 
-
+        if (winLevel2)
+        {
+            //Dissolve door
+            if (mat.GetFloat("_DissolveAmount") < 1)
+            {
+                float temp = mat.GetFloat("_DissolveAmount") + speed * Time.deltaTime;
+                mat.SetFloat("_DissolveAmount", temp);
+            }
+        }
     }
 
     public void WinLevel2()
