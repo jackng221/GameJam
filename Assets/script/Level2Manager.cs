@@ -36,7 +36,7 @@ public class Level2Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(prevColor != color)
+        /*if(prevColor != color)
         {
             switch (color)
             {
@@ -69,7 +69,7 @@ public class Level2Manager : MonoBehaviour
                 break;
             }
             prevColor = color;
-        }
+        }*/
 
 
     }
@@ -80,4 +80,5 @@ public class Level2Manager : MonoBehaviour
         winLevel2 = true;
         unlock.Play();
     }
+
 }

@@ -33,6 +33,7 @@ public class GetFilter : MonoBehaviour
 
             Dialog.GetComponent<TextControl>().text.Add("What is this....A pair of glasses and.... 2 kind of lens...");
             Dialog.GetComponent<TextControl>().text.Add("Humm, it should be some kind of hint on it....What should I do..?");
+            Dialog.GetComponent<TextControl>().type = 1;
             Dialog.gameObject.SetActive(true);
             conversate.SetActive(false);
             hint.SetActive(false);
