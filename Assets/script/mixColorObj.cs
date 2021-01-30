@@ -33,8 +33,8 @@ public class mixColorObj : MonoBehaviour
                 LightColor.Add(ObjectManager.LightColor.Cyan);
                 break;
             case ObjectManager.LightColor.Cyan:
-                FilterColor.Add(ObjectManager.LightColor.Green);
                 FilterColor.Add(ObjectManager.LightColor.Blue);
+                FilterColor.Add(ObjectManager.LightColor.Green);
                 LightColor.Add(ObjectManager.LightColor.Magenta);
                 LightColor.Add(ObjectManager.LightColor.Yellow);
                 break;
