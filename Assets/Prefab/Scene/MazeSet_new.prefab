@@ -3292,6 +3292,101 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.45536178, y: 0.051829826, z: 1.771654}
   m_Center: {x: -0.000000074505806, y: -0.0000000093132275, z: 0.8858271}
+--- !u!1 &2169818284650670841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6869506274092281160}
+  - component: {fileID: 1909783696450620524}
+  - component: {fileID: 4357469998404735242}
+  - component: {fileID: 8293975978797452246}
+  m_Layer: 2
+  m_Name: TriggerCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6869506274092281160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169818284650670841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.17, y: 0.185, z: 0.182}
+  m_LocalScale: {x: 0.57415, y: 0.57415, z: 0.57415}
+  m_Children: []
+  m_Father: {fileID: 7502153399924483837}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1909783696450620524
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169818284650670841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: -0.35, y: 0.5, z: 1.5}
+--- !u!114 &4357469998404735242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169818284650670841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bacf9f7b0c4bd6d47b67bc72e6fe8450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input:
+  - Another door it seems. Must have some way to open it as well.
+  - A door below in the maze, likely related.
+  input2:
+  - Finally solved this maze. Just a little more.
+  - With both the glasses and the flashlight, I will find my way out.
+  Dialog: {fileID: 0}
+  conversate: {fileID: 0}
+  lv1manager: {fileID: 0}
+  objectmanager: {fileID: 0}
+  isdoor: 2
+--- !u!114 &8293975978797452246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169818284650670841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 038edf1b8e5b97a4c8238e90288dd4e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isenter: 0
+  move: {fileID: 0}
+  player: {fileID: 0}
+  lv1manager: {fileID: 0}
+  objectmanager: {fileID: 0}
+  level3sp: {fileID: 0}
+  level2sp: {fileID: 7502153399542198679}
+  bgmchanger: {fileID: 0}
+  level: 2
+  Switching: {fileID: 0}
+  wining: {fileID: 0}
+  Wintext: {fileID: 0}
+  GameEnd: {fileID: 0}
+  GameEndBGM: {fileID: 0}
 --- !u!1 &2211287365003563897
 GameObject:
   m_ObjectHideFlags: 0
@@ -13087,6 +13182,7 @@ Transform:
   - {fileID: 7502153399562657606}
   - {fileID: 7502153398393738152}
   - {fileID: 8401966204981328116}
+  - {fileID: 6869506274092281160}
   m_Father: {fileID: 211175059168149969}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13099,7 +13195,7 @@ SphereCollider:
   m_GameObject: {fileID: 7502153399924483838}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.6
   m_Center: {x: -0.35, y: 0.5, z: 1.5}
@@ -13110,7 +13206,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153399924483838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bacf9f7b0c4bd6d47b67bc72e6fe8450, type: 3}
   m_Name: 
@@ -13133,7 +13229,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153399924483838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 038edf1b8e5b97a4c8238e90288dd4e5, type: 3}
   m_Name: 
@@ -17018,7 +17114,7 @@ PrefabInstance:
     - target: {fileID: 8792347533869766543, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.363
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766543, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
@@ -17059,6 +17155,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766543, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 8.093205
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
