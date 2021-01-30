@@ -13,10 +13,14 @@ public class Level1Manager : MonoBehaviour
     public bool once = false;
     [SerializeField]
     AudioSource unlock;
+
+    Material mat;
+    [SerializeField] float speed = 0.15f;
+    public GameObject exitDoor;
     // Start is called before the first frame update
     void Start()
     {
-        
+        mat = exitDoor.GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -44,6 +48,13 @@ public class Level1Manager : MonoBehaviour
 
 
         if (win[0].GetComponent<TextColorChecker>().isFulfil == true && win[2].GetComponent<TextColorChecker>().isFulfil == true && win[1].GetComponent<TextColorChecker>().isFulfil == true) {
+            //Dissolve door
+            if (mat.GetFloat("_DissolveAmount") < 1)
+            {
+                float temp = mat.GetFloat("_DissolveAmount") + speed * Time.deltaTime;
+                mat.SetFloat("_DissolveAmount", temp);
+            }
+
             Level1iswin = true;
         }
         if (Level1iswin && once == false) {
