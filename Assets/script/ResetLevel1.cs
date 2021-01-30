@@ -37,8 +37,8 @@ public class ResetLevel1 : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<FPSMovement>().ismenuopen = true;
 
-            Dialog.GetComponent<TextControl>().text.Add("What is this?");
-            Dialog.GetComponent<TextControl>().text.Add("This look like a button...?");
+            Dialog.GetComponent<TextControl>().text.Add("Why is there a button here..?");
+            Dialog.GetComponent<TextControl>().text.Add("Doesn't seem harmful.. maybe something to do with the letters.");
             Dialog.GetComponent<TextControl>().type = 1;
             Dialog.gameObject.SetActive(true);
             conversate.SetActive(false);

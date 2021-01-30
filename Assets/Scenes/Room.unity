@@ -1443,7 +1443,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.4
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -4489,7 +4489,7 @@ GameObject:
   - component: {fileID: 1240123662}
   - component: {fileID: 1240123664}
   - component: {fileID: 1240123663}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TriggerCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6872,7 +6872,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.3
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -18785,7 +18785,7 @@ GameObject:
   - component: {fileID: 2197635341252559902}
   - component: {fileID: 2197635341252559903}
   - component: {fileID: 2197635341252559891}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35558,8 +35558,9 @@ GameObject:
   - component: {fileID: 6881632249914943511}
   - component: {fileID: 6881632249914943496}
   - component: {fileID: 6881632249914943508}
-  - component: {fileID: 6881632249914943498}
+  - component: {fileID: 6881632249914943500}
   - component: {fileID: 6881632249914943499}
+  - component: {fileID: 6881632249914943498}
   m_Layer: 31
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -35574,7 +35575,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6881632249914943497}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -35591,7 +35592,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6881632249914943497}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -35644,6 +35645,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &6881632249914943500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881632249914943497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6da09afc7acf748a807055a15d50e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6881632249914943508
 MonoBehaviour:
   m_ObjectHideFlags: 0

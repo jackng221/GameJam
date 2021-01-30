@@ -177,6 +177,67 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: LIGHT
+--- !u!1 &1240123661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1240123662}
+  - component: {fileID: 1240123664}
+  - component: {fileID: 1240123663}
+  m_Layer: 2
+  m_Name: TriggerCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1240123662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240123661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.70929885, y: 0.70929885, z: 0.70929885}
+  m_Children: []
+  m_Father: {fileID: 7502153400063241782}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1240123664
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240123661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.7
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1240123663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240123661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be88a0a4ff8d1340b303d35255a95b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dialog: {fileID: 0}
+  hint: {fileID: 0}
+  conversate: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &1248757420
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,8 +346,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1, z: 2.36}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.99999994, y: 1, z: 1.8871169}
+  m_Center: {x: 0, y: 0, z: 0.23644137}
 --- !u!114 &1248757426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,7 +2145,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 981513988901276411}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -4531,7 +4592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2321639494170419173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3000965, y: -1.3733333, z: -3.9887471}
+  m_LocalPosition: {x: 0.89, y: -1.3733333, z: -3.9887471}
   m_LocalScale: {x: 0.034802668, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 2321639495144231459}
@@ -5441,8 +5502,8 @@ GameObject:
   - component: {fileID: 7852853695184975207}
   - component: {fileID: 1429970616510985956}
   - component: {fileID: 908277840466626241}
-  - component: {fileID: 4546605251897514509}
-  m_Layer: 16
+  - component: {fileID: 1161593454739532778}
+  m_Layer: 0
   m_Name: Box002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5510,7 +5571,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4546605251897514509
+--- !u!65 &1161593454739532778
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5521,8 +5582,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.03262512, y: 6.5233607, z: 1.771654}
-  m_Center: {x: 0, y: 0, z: 0.8858271}
+  m_Size: {x: 0.03262512, y: 6.5233617, z: 1.7716541}
+  m_Center: {x: -0.00000011920929, y: 0, z: 0.8858274}
 --- !u!1 &2547011499951931683
 GameObject:
   m_ObjectHideFlags: 0
@@ -5814,7 +5875,7 @@ GameObject:
   - component: {fileID: 7070503806739228075}
   - component: {fileID: 9083738444094174915}
   - component: {fileID: 4681486336077516384}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: Box003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5893,8 +5954,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0870812, y: 0.029920662, z: 1.771654}
-  m_Center: {x: 0, y: 0.0000019073486, z: 0.8858271}
+  m_Size: {x: 3.0870812, y: 0.029920666, z: 1.7716541}
+  m_Center: {x: 0, y: 0, z: 0.8858273}
 --- !u!1 &2716804665964250299
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,7 +6526,7 @@ GameObject:
   - component: {fileID: 4359831617601641473}
   - component: {fileID: 2849723539803553038}
   - component: {fileID: 3175024508642349955}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: Box004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6544,8 +6605,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.0870812, y: 0.029920662, z: 1.771654}
-  m_Center: {x: 0.00000011920929, y: 0.0000019073486, z: 0.8858271}
+  m_Size: {x: 3.0870812, y: 0.029920666, z: 1.7716541}
+  m_Center: {x: -0.00000011920929, y: 0, z: 0.8858273}
 --- !u!1 &3577050342968409825
 GameObject:
   m_ObjectHideFlags: 0
@@ -11602,7 +11663,7 @@ GameObject:
   - component: {fileID: 7737122880108327883}
   - component: {fileID: 4997854463455566642}
   - component: {fileID: 56670163533735293}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: Box001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11681,8 +11742,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.03262512, y: 6.5233607, z: 1.771654}
-  m_Center: {x: 0, y: 0, z: 0.8858271}
+  m_Size: {x: 0.03262512, y: 6.5233617, z: 1.7716541}
+  m_Center: {x: 0, y: 0, z: 0.8858274}
 --- !u!1 &6590735661409629415
 GameObject:
   m_ObjectHideFlags: 0
@@ -11917,7 +11978,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6821091950463239833}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -12239,7 +12300,7 @@ GameObject:
   - component: {fileID: 4433222229588695056}
   - component: {fileID: 3182080177978243417}
   - component: {fileID: 7527696964222128902}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: Box101
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12318,8 +12379,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.065535, y: 0.039007574, z: 1.771654}
-  m_Center: {x: 0.00000017881393, y: 0, z: 0.8858262}
+  m_Size: {x: 3.065535, y: 0.03900758, z: 1.7716541}
+  m_Center: {x: -0.000000059604645, y: 0, z: 0.8858273}
 --- !u!1 &7266782020609483898
 GameObject:
   m_ObjectHideFlags: 0
@@ -12559,7 +12620,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153398559477359}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -12652,7 +12713,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153399088329289}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -12707,7 +12768,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153399542198679}
   m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: -3.64, y: 0.533, z: 3.844}
+  m_LocalPosition: {x: -3.64, y: 0.706, z: 3.844}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 211175059168149969}
@@ -12911,7 +12972,7 @@ GameObject:
   - component: {fileID: 7502153399900529875}
   - component: {fileID: 7502153399900529874}
   - component: {fileID: 7502153399900529877}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: Box004 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12991,7 +13052,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.0870812, y: 0.029920662, z: 1.771654}
-  m_Center: {x: 0.00000011920929, y: 0.0000019073486, z: 0.8858271}
+  m_Center: {x: 0, y: 0.00000047683716, z: 0.8858281}
 --- !u!1 &7502153399924483838
 GameObject:
   m_ObjectHideFlags: 0
@@ -13004,7 +13065,7 @@ GameObject:
   - component: {fileID: 7502153399924483836}
   - component: {fileID: 7502153399924483839}
   - component: {fileID: 7502153399924483834}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Door (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13055,17 +13116,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input:
-  - The door get rusty, cannot open it.
-  - Seem like something related to the maze below.
+  - Another door it seems. Must have some way to open it as well.
+  - A door below in the maze, likely related.
   input2:
-  - Finally solve this maze. Hope that I can escape here.
-  - OK, the pattern seem the same with the last room. The door can be open now.
+  - Finally solved this maze. Just a little more.
+  - With both the glasses and the flashlight, I will find my way out.
   Dialog: {fileID: 0}
   conversate: {fileID: 0}
   lv1manager: {fileID: 0}
   objectmanager: {fileID: 0}
   isdoor: 2
-  iswall: 0
 --- !u!114 &7502153399924483834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13140,7 +13200,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153400052278904}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -13183,7 +13243,7 @@ GameObject:
   - component: {fileID: 7502153400063241780}
   - component: {fileID: 7502153400063241783}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Glasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13197,10 +13257,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153400063241769}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: -0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.28099984, z: 0}
   m_LocalScale: {x: 0.749587, y: 0.9129469, z: 0.9129469}
   m_Children:
   - {fileID: 8868435984833503725}
+  - {fileID: 1240123662}
   m_Father: {fileID: 211175059168149969}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: -90.00001, y: 270, z: 0}
@@ -13213,7 +13274,7 @@ SphereCollider:
   m_GameObject: {fileID: 7502153400063241769}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
@@ -13224,7 +13285,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153400063241769}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0be88a0a4ff8d1340b303d35255a95b2, type: 3}
   m_Name: 
@@ -13260,7 +13321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153400093552932}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.281, z: 0}
   m_LocalScale: {x: 0.749587, y: 0.9129469, z: 0.9129469}
   m_Children: []
   m_Father: {fileID: 211175059168149969}
@@ -13282,7 +13343,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7502153400093552932}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -14438,7 +14499,7 @@ GameObject:
   - component: {fileID: 5531349871835208565}
   - component: {fileID: 5202723685257380799}
   - component: {fileID: 4036668710332778958}
-  m_Layer: 16
+  m_Layer: 0
   m_Name: Box107
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14517,8 +14578,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.1101708, y: 0.057622693, z: 1.771654}
-  m_Center: {x: 0, y: 0, z: 0.8858262}
+  m_Size: {x: 3.1101708, y: 0.0576227, z: 1.7716538}
+  m_Center: {x: 0, y: 1.5106029e-13, z: 0.8858271}
 --- !u!1 &8357019341821803360
 GameObject:
   m_ObjectHideFlags: 0
@@ -16736,6 +16797,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
+      propertyPath: input.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
       propertyPath: Dialog
       value: 
       objectReference: {fileID: 0}
@@ -16753,6 +16819,31 @@ PrefabInstance:
         type: 3}
       propertyPath: objectmanager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[0]
+      value: It's.. a maze.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[1]
+      value: And I'm standing on some kind of glass.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[2]
+      value: So, that light orb should be reaching the exit instead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[3]
+      value: But how do I control it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[4]
+      value: '*Left click to guide"'
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766542, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
@@ -16827,12 +16918,22 @@ PrefabInstance:
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.42354724
+      value: 0.3471307
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.28822476
+      value: 0.25001636
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.8373933
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.00035075005
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 639de2779a810c541893c670e8bff38a, type: 3}
@@ -16849,6 +16950,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7502153398559477356}
     m_Modifications:
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: Dialog
@@ -16868,6 +16974,31 @@ PrefabInstance:
         type: 3}
       propertyPath: objectmanager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[0]
+      value: It's.. a maze.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[1]
+      value: And I'm standing on some kind of glass.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[2]
+      value: So, that light orb should be reaching the exit instead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[3]
+      value: But how do I control it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[4]
+      value: '*Left click to guide"'
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766542, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
@@ -16942,17 +17073,22 @@ PrefabInstance:
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.17969275
+      value: 0.32791755
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.16629744
+      value: 0.2404096
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Center.z
-      value: -4.7199196e-16
+      value: -0.004098149
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.8438799
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 639de2779a810c541893c670e8bff38a, type: 3}
@@ -16969,6 +17105,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7502153398559477356}
     m_Modifications:
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: Dialog
@@ -16988,6 +17129,31 @@ PrefabInstance:
         type: 3}
       propertyPath: objectmanager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[0]
+      value: It's.. a maze.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[1]
+      value: And I'm standing on some kind of glass.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[2]
+      value: So, that light orb should be reaching the exit instead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[3]
+      value: But how do I control it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[4]
+      value: '*Left click to guide"'
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766542, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
@@ -17062,12 +17228,22 @@ PrefabInstance:
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.42354724
+      value: 0.33449173
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.28822476
+      value: 0.24369697
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.83652383
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.009991571
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 639de2779a810c541893c670e8bff38a, type: 3}
@@ -17084,6 +17260,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7502153398559477356}
     m_Modifications:
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: Dialog
@@ -17103,6 +17284,31 @@ PrefabInstance:
         type: 3}
       propertyPath: objectmanager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[0]
+      value: It's.. a maze.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[1]
+      value: And I'm standing on some kind of glass.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[2]
+      value: So, that light orb should be reaching the exit instead.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[3]
+      value: But how do I control it?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766541, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: input.Array.data[4]
+      value: '*Left click to guide"'
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766542, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
@@ -17177,12 +17383,22 @@ PrefabInstance:
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.42354724
+      value: 0.34115246
       objectReference: {fileID: 0}
     - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.28822476
+      value: 0.2470274
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.84617114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792347533869766546, guid: 639de2779a810c541893c670e8bff38a,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.0114966035
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 639de2779a810c541893c670e8bff38a, type: 3}

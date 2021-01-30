@@ -23,7 +23,7 @@ public class GetFilter : MonoBehaviour
             hint.SetActive(false);
             conversate.SetActive(false);
             isenter = false;
-            this.gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.SetActive(false);
 
         }
 
@@ -31,8 +31,9 @@ public class GetFilter : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<FPSMovement>().ismenuopen = true;
 
-            Dialog.GetComponent<TextControl>().text.Add("What is this....A pair of glasses and.... 2 kind of lens...");
-            Dialog.GetComponent<TextControl>().text.Add("Humm, it should be some kind of hint on it....What should I do..?");
+            Dialog.GetComponent<TextControl>().text.Add("A pair of glasses and 2 more pairs of lens.");
+            Dialog.GetComponent<TextControl>().text.Add("Somehow match the color of these color walls.");
+            Dialog.GetComponent<TextControl>().text.Add("Might just be what I need..");
             Dialog.GetComponent<TextControl>().type = 1;
             Dialog.gameObject.SetActive(true);
             conversate.SetActive(false);

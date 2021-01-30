@@ -24,7 +24,7 @@ public class GetFlashAndPaper1 : MonoBehaviour
             hint.SetActive(false);
             conversate.SetActive(false);
             isenter = false;
-            this.gameObject.SetActive(false);
+            gameObject.transform.parent.gameObject.SetActive(false);
 
         }
 
@@ -32,9 +32,10 @@ public class GetFlashAndPaper1 : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<FPSMovement>().ismenuopen = true;
 
-            Dialog.GetComponent<TextControl>().text.Add("A normal table, on the top of wall has a character. A RED 'H' ");
-            Dialog.GetComponent<TextControl>().text.Add("This is....?");
-            Dialog.GetComponent<TextControl>().text.Add("A LightFlash and ....What? A paper?");
+            Dialog.GetComponent<TextControl>().text.Add("My table.");
+            Dialog.GetComponent<TextControl>().text.Add("What are these? A flashlight.. and a paper.");
+            Dialog.GetComponent<TextControl>().text.Add("...Something about color blending.");
+            Dialog.GetComponent<TextControl>().text.Add("*H at above*");
             Dialog.GetComponent<TextControl>().type = 1;
             Dialog.gameObject.SetActive(true);
             conversate.SetActive(false);
