@@ -5,7 +5,7 @@ using UnityEngine;
 public class Level2Manager : MonoBehaviour
 {
     static Level2Manager instance;
-    public static Level2Manager Instanse{
+    public static Level2Manager Instance{
         get 
         {
             return instance;

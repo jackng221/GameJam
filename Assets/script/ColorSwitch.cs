@@ -24,12 +24,12 @@ public class ColorSwitch : MonoBehaviour
         {
             if (switchOn)
             {
-                Level2Manager.Instanse.color -= (int)color;
+                Level2Manager.Instance.color -= (int)color;
                 switchOn = false;
             }
             else
             {
-                Level2Manager.Instanse.color += (int)color;
+                Level2Manager.Instance.color += (int)color;
                 switchOn = true;
             }
         }

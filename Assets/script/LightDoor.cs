@@ -10,7 +10,8 @@ public class LightDoor : MonoBehaviour
 {
     [SerializeField]
     Text clearText;
-    
+    GameObject glowSpot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,10 @@ public class LightDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Level2Manager.Instance.winLevel2)
+        {
+            glowSpot.transform.DOMove(this.gameObject.transform.position, 1f);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -33,7 +37,7 @@ public class LightDoor : MonoBehaviour
             {
                 GameObject.Find("ObjectManager").GetComponent<Level2Manager>().WinLevel2();
                 other.GetComponent<NavMeshAgent>().enabled = false;
-                other.gameObject.transform.DOMove(this.gameObject.transform.position, 1f);
+                glowSpot = other.gameObject;
             }
 
         }
