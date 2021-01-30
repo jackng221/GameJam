@@ -9,10 +9,11 @@ public class DissolveTest : MonoBehaviour
     void Start()
     {
         mat = GetComponent<Renderer>().material;
-        if (GetComponent<Collider>())
-        {
-            GetComponent<Collider>().enabled = false;
-        }
+        //if (GetComponent<Collider>())
+        //{
+        //    GetComponent<Collider>().enabled = false;
+        //}
+        //gameObject.layer = 2; //Ignore Raycast
     }
 
     // Update is called once per frame
