@@ -38452,7 +38452,7 @@ PrefabInstance:
         type: 3}
       propertyPath: unlock
       value: 
-      objectReference: {fileID: 927315292}
+      objectReference: {fileID: 1529450468}
     - target: {fileID: 8188101658589137205, guid: b11c5528a79d41c4ea4b40288fde884c,
         type: 3}
       propertyPath: exitDoor
