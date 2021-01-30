@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class EndButton : MonoBehaviour
 {
-    
+    [SerializeField]
+    Button endbtn;
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.GetComponent<Button>().onClick.AddListener(() =>
+        endbtn.onClick.AddListener(() =>
         {
             Application.Quit();
         });
