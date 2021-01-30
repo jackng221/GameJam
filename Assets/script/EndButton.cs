@@ -5,20 +5,12 @@ using UnityEngine.UI;
 
 public class EndButton : MonoBehaviour
 {
-    [SerializeField]
-    Button endbtn;
-    // Start is called before the first frame update
-    void Start()
-    {
-        endbtn.onClick.AddListener(() =>
-        {
-            Application.Quit();
-        });
-    }
+    //[SerializeField]
+    //Button endbtn;
 
-    // Update is called once per frame
-    void Update()
+    public void EndGame()
     {
-        
+        Debug.Log("EndGame");
+        Application.Quit();
     }
 }
