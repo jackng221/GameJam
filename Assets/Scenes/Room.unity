@@ -3927,6 +3927,50 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8188101657750477252}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1106586606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106586607}
+  - component: {fileID: 1106586608}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106586607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106586606}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.18, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2197635342827623154}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1106586608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106586606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1109377840
 GameObject:
   m_ObjectHideFlags: 0
@@ -4005,6 +4049,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1146288313
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1146288314}
+  - component: {fileID: 1146288315}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1146288314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146288313}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.42, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2197635342946116131}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1146288315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1146288313}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1162742863
 GameObject:
   m_ObjectHideFlags: 0
@@ -4220,7 +4308,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1179155198
 Transform:
   m_ObjectHideFlags: 0
@@ -5974,6 +6062,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788879629}
   m_Mesh: {fileID: -3132628772946453785, guid: d6325660055c31447a5fd8e71acfc6de, type: 3}
+--- !u!1 &1800849440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800849441}
+  - component: {fileID: 1800849442}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1800849441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800849440}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.06, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2197635342419394849}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1800849442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800849440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1802509721
 GameObject:
   m_ObjectHideFlags: 0
@@ -18267,27 +18399,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
   m_Center: {x: 0.054851547, y: 0, z: 0}
---- !u!114 &2197635341382537205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2197635341382537207}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bacf9f7b0c4bd6d47b67bc72e6fe8450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input:
-  - This is a blue wall. Piece of Cake huh.
-  input2: []
-  Dialog: {fileID: 128481020}
-  conversate: {fileID: 1915003518}
-  lv1manager: {fileID: 1073680620}
-  objectmanager: {fileID: 8911324781876772222}
-  isdoor: 0
-  iswall: 1
 --- !u!4 &2197635341382537206
 Transform:
   m_ObjectHideFlags: 0
@@ -18297,7 +18408,7 @@ Transform:
   m_GameObject: {fileID: 2197635341382537207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.30724502, y: 0.4189999, z: 0.136}
-  m_LocalScale: {x: 0.05, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.05, y: 1.2, z: 1.65648}
   m_Children:
   - {fileID: 2197635343010492809}
   m_Father: {fileID: 5964041768369162635}
@@ -18313,7 +18424,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2197635341382537206}
   - component: {fileID: 2197635341382537204}
-  - component: {fileID: 2197635341382537205}
   m_Layer: 0
   m_Name: GameObject (4)
   m_TagString: Untagged
@@ -18516,7 +18626,7 @@ Transform:
   m_GameObject: {fileID: 2197635341810459545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.294745, y: 0.4189999, z: 0.136}
-  m_LocalScale: {x: 0.05, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.05, y: 1.2, z: 1.65648}
   m_Children:
   - {fileID: 2197635341195022135}
   m_Father: {fileID: 5964041768369162635}
@@ -18532,7 +18642,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2197635341810459544}
   - component: {fileID: 2197635341810459558}
-  - component: {fileID: 2197635341810459559}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -18553,28 +18662,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
   m_Center: {x: 0.054851547, y: 0, z: 0}
---- !u!114 &2197635341810459559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2197635341810459545}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bacf9f7b0c4bd6d47b67bc72e6fe8450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input:
-  - This is a red wall. I don't think this the "end" of my life?
-  - By the way, I have a feeling that the end is coming.
-  input2: []
-  Dialog: {fileID: 128481020}
-  conversate: {fileID: 1915003518}
-  lv1manager: {fileID: 1073680620}
-  objectmanager: {fileID: 8911324781876772222}
-  isdoor: 0
-  iswall: 1
 --- !u!65 &2197635341867275035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18588,27 +18675,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
   m_Center: {x: 0.054851547, y: 0, z: 0}
---- !u!114 &2197635341867275036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2197635341867275038}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bacf9f7b0c4bd6d47b67bc72e6fe8450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input:
-  - This is a cyan wall.  I can smell the goal is coming huh.
-  input2: []
-  Dialog: {fileID: 128481020}
-  conversate: {fileID: 1915003518}
-  lv1manager: {fileID: 1073680620}
-  objectmanager: {fileID: 8911324781876772222}
-  isdoor: 0
-  iswall: 1
 --- !u!4 &2197635341867275037
 Transform:
   m_ObjectHideFlags: 0
@@ -18618,7 +18684,7 @@ Transform:
   m_GameObject: {fileID: 2197635341867275038}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.719005, y: 0.4189999, z: 0.136}
-  m_LocalScale: {x: 0.05, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.05, y: 1.2, z: 1.65648}
   m_Children:
   - {fileID: 2197635342946116131}
   m_Father: {fileID: 5964041768369162635}
@@ -18634,7 +18700,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2197635341867275037}
   - component: {fileID: 2197635341867275035}
-  - component: {fileID: 2197635341867275036}
   - component: {fileID: 2197635341867275040}
   - component: {fileID: 2197635341867275039}
   m_Layer: 0
@@ -18672,7 +18737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjColor: 6
   prevColor: 6
-  receiveColor: 6
+  receiveColor: 8
   FilterColor: 
   LightColor: 
   colorCorrect: 0
@@ -18691,28 +18756,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
   m_Center: {x: 0.054851547, y: 0, z: 0}
---- !u!114 &2197635341915499221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2197635341915499223}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bacf9f7b0c4bd6d47b67bc72e6fe8450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input:
-  - This is a magenta wall... humm, it doesn't fit any of filter.
-  - What should I do....
-  input2: []
-  Dialog: {fileID: 128481020}
-  conversate: {fileID: 1915003518}
-  lv1manager: {fileID: 1073680620}
-  objectmanager: {fileID: 8911324781876772222}
-  isdoor: 0
-  iswall: 1
 --- !u!4 &2197635341915499222
 Transform:
   m_ObjectHideFlags: 0
@@ -18722,7 +18765,7 @@ Transform:
   m_GameObject: {fileID: 2197635341915499223}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.20999998, y: 0.4189999, z: 0.136}
-  m_LocalScale: {x: 0.05, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.05, y: 1.2, z: 1.65648}
   m_Children:
   - {fileID: 2197635342827623154}
   m_Father: {fileID: 5964041768369162635}
@@ -18738,7 +18781,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2197635341915499222}
   - component: {fileID: 2197635341915499220}
-  - component: {fileID: 2197635341915499221}
   - component: {fileID: 2197635341915499225}
   - component: {fileID: 2197635341915499224}
   m_Layer: 0
@@ -18776,7 +18818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjColor: 5
   prevColor: 6
-  receiveColor: 6
+  receiveColor: 8
   FilterColor: 
   LightColor: 
   colorCorrect: 0
@@ -18888,27 +18930,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
   m_Center: {x: 0.054851547, y: 0, z: 0}
---- !u!114 &2197635342242080433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2197635342242080435}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bacf9f7b0c4bd6d47b67bc72e6fe8450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input:
-  - This is a blue wall. Seem the filter is quite useful tool huh.
-  input2: []
-  Dialog: {fileID: 128481020}
-  conversate: {fileID: 1915003518}
-  lv1manager: {fileID: 1073680620}
-  objectmanager: {fileID: 8911324781876772222}
-  isdoor: 0
-  iswall: 1
 --- !u!4 &2197635342242080434
 Transform:
   m_ObjectHideFlags: 0
@@ -18918,7 +18939,7 @@ Transform:
   m_GameObject: {fileID: 2197635342242080435}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.835995, y: 0.4189999, z: 0.136}
-  m_LocalScale: {x: 0.05, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.05, y: 1.2, z: 1.65648}
   m_Children:
   - {fileID: 2197635342643041369}
   m_Father: {fileID: 5964041768369162635}
@@ -18934,7 +18955,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2197635342242080434}
   - component: {fileID: 2197635342242080432}
-  - component: {fileID: 2197635342242080433}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -18965,7 +18985,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1800849441}
   m_Father: {fileID: 2660267832712766966}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19204,7 +19225,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1106586607}
   m_Father: {fileID: 2197635341915499222}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19305,7 +19327,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1146288314}
   m_Father: {fileID: 2197635341867275037}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20718,7 +20741,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2660267832712766966}
   - component: {fileID: 2660267832712766964}
-  - component: {fileID: 2660267832712766967}
   - component: {fileID: 2660267832712766955}
   - component: {fileID: 2660267832712766954}
   m_Layer: 0
@@ -20756,7 +20778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjColor: 7
   prevColor: 6
-  receiveColor: 6
+  receiveColor: 8
   FilterColor: 
   LightColor: 
   colorCorrect: 0
@@ -20784,35 +20806,12 @@ Transform:
   m_GameObject: {fileID: 2660267832712766953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.2277551, y: 0.4189999, z: 0.136}
-  m_LocalScale: {x: 0.05, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 0.05, y: 1.2, z: 1.65648}
   m_Children:
   - {fileID: 2197635342419394849}
   m_Father: {fileID: 5964041768369162635}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2660267832712766967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2660267832712766953}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bacf9f7b0c4bd6d47b67bc72e6fe8450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input:
-  - This is a yellow wall.
-  - Well Well, seem I finally arrive here.
-  - The goal is just behind this door!
-  input2: []
-  Dialog: {fileID: 128481020}
-  conversate: {fileID: 1915003518}
-  lv1manager: {fileID: 1073680620}
-  objectmanager: {fileID: 8911324781876772222}
-  isdoor: 0
-  iswall: 1
 --- !u!1 &2664227606633980255
 GameObject:
   m_ObjectHideFlags: 0
@@ -34972,7 +34971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6881632250352329307
 Transform:
   m_ObjectHideFlags: 0

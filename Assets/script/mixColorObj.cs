@@ -6,7 +6,7 @@ public class mixColorObj : MonoBehaviour
 {
     public ObjectManager.LightColor ObjColor;
     public ObjectManager.LightColor prevColor;
-    public ObjectManager.LightColor receiveColor;
+    public ObjectManager.LightColor receiveColor = ObjectManager.LightColor.White;
     public List<ObjectManager.LightColor> FilterColor = new List<ObjectManager.LightColor>();
     public List<ObjectManager.LightColor> LightColor = new List<ObjectManager.LightColor>();
     public bool colorCorrect = false;
