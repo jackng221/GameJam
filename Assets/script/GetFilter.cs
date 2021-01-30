@@ -16,7 +16,7 @@ public class GetFilter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isenter == true && Input.GetKeyDown(KeyCode.I))
+        if (isenter == true && Input.GetKeyDown(KeyCode.I) && Dialog.gameObject.activeInHierarchy != true)
         {
             player.GetComponent<SetCull>().isgetfilter = true;
             player = null;

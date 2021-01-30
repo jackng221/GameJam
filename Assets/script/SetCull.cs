@@ -7,7 +7,7 @@ using DG.Tweening;
 public class SetCull : MonoBehaviour
 {
     [SerializeField]
-    GameObject cam, FlashLight, FlashLightRepresent, Filter, paper1, paper2, blur, Hintpaper1;
+    GameObject cam, FlashLight, FlashLightRepresent, Filter, paper1, blur, Hintpaper1;
     [SerializeField]
     GameObject axis;
     public int stat = 0;
@@ -30,40 +30,40 @@ public class SetCull : MonoBehaviour
         if (isgetLight == true)
         {
             FlashLight.gameObject.SetActive(true);
+            
+        }
+        if (isgetpaper1 == true && this.gameObject.GetComponent<FPSMovement>().ismenuopen == false)
+        {
             FlashLightRepresent.gameObject.SetActive(true);
+            Hintpaper1.gameObject.SetActive(true);
         }
-        if (isgetpaper1 == true) {
-
+        else
+        {
+            FlashLightRepresent.gameObject.SetActive(false);
+            Hintpaper1.gameObject.SetActive(false);
         }
-        if (isgetpaper1 == true && Input.GetKeyDown(KeyCode.P) && paper2.activeInHierarchy != true)
+        if (isgetpaper1 == true && Input.GetKeyDown(KeyCode.K))
         {
             if (paper1.activeInHierarchy)
             {
+                FlashLightRepresent.gameObject.SetActive(true);
+                Hintpaper1.gameObject.SetActive(true);
                 blur.gameObject.SetActive(false);
                 paper1.gameObject.SetActive(false);
+                this.gameObject.GetComponent<FPSMovement>().ismenuopen = false;
             }
             else {
+                FlashLightRepresent.gameObject.SetActive(false);
+                Hintpaper1.gameObject.SetActive(false);
                 blur.gameObject.SetActive(true);
                 paper1.gameObject.SetActive(true);
+                this.gameObject.GetComponent<FPSMovement>().ismenuopen = true;
             }
             
         }
-        if (isgetpaper2 == true && Input.GetKeyDown(KeyCode.K) && paper1.activeInHierarchy != true)
-        {
-            if (paper2.activeInHierarchy)
-            {
-                blur.gameObject.SetActive(false);
-                paper2.gameObject.SetActive(false);
-            }
-            else
-            {
-                blur.gameObject.SetActive(true);
-                paper2.gameObject.SetActive(true);
-            }
-        }
         if (isgetfilter == true)
         {
-            filter.gameObject.SetActive(true);
+            Filter.gameObject.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.E) && iscomplete == true && isgetfilter == true) {
             WearGlass.Play();

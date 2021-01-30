@@ -16,7 +16,7 @@ public class GetFlashAndPaper1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isenter == true && Input.GetKeyDown(KeyCode.I))
+        if (isenter == true && Input.GetKeyDown(KeyCode.I) && Dialog.gameObject.activeInHierarchy != true)
         {
             player.GetComponent<SetCull>().isgetLight = true;
             player.GetComponent<SetCull>().isgetpaper1 = true;
@@ -32,6 +32,7 @@ public class GetFlashAndPaper1 : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<FPSMovement>().ismenuopen = true;
 
+            Dialog.GetComponent<TextControl>().text.Add("A normal table, on the top of wall has a character. A RED 'H' ");
             Dialog.GetComponent<TextControl>().text.Add("This is....?");
             Dialog.GetComponent<TextControl>().text.Add("A LightFlash and ....What? A paper?");
             Dialog.gameObject.SetActive(true);

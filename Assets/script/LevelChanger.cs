@@ -35,10 +35,12 @@ public class LevelChanger : MonoBehaviour
                 {
                     bgmchanger.GetComponent<BGMSwitch>().switchBGM();
                     player.GetComponent<FPSMovement>().ischanging = true;
+                    player.GetComponent<FPSMovement>().ismenuopen = true;
                     Switching.DOColor(new Color32(255, 255, 255, 255), 2f).OnComplete(() => {
                         player.transform.position = level2sp.transform.position;
                         Switching.color = new Color32(255, 255, 255, 0);
                         player.GetComponent<FPSMovement>().ischanging = false;
+                        player.GetComponent<FPSMovement>().ismenuopen = false;
                     });
                 }
 
@@ -46,10 +48,12 @@ public class LevelChanger : MonoBehaviour
             {
                 bgmchanger.GetComponent<BGMSwitch>().switchBGM();
                 player.GetComponent<FPSMovement>().ischanging = true;
+                player.GetComponent<FPSMovement>().ismenuopen = true;
                 Switching.DOColor(new Color32(255, 255, 255, 255), 2f).OnComplete(() => {
                     player.transform.position = level3sp.transform.position;
                     Switching.color = new Color32(255, 255, 255, 0);
                     player.GetComponent<FPSMovement>().ischanging = false;
+                    player.GetComponent<FPSMovement>().ismenuopen = false;
                 });
             }
             if (level == 3)
@@ -63,6 +67,10 @@ public class LevelChanger : MonoBehaviour
                     });
             }
         }
+        if (this.gameObject.GetComponent<PlayerEnter>().Dialog.gameObject.activeInHierarchy == true) {
+            move.SetActive(false);
+        }
+
     }
          
 
@@ -72,18 +80,20 @@ public class LevelChanger : MonoBehaviour
         if (other.transform.tag == "Player")
         {
             player = other.gameObject;
-            if (this.gameObject.GetComponent<PlayerEnter>().Dialog.gameObject.activeInHierarchy == false)
+            if (this.gameObject.GetComponent<PlayerEnter>().Dialog.gameObject.activeInHierarchy == false && ((level==1 && lv1manager.GetComponent<Level1Manager>().Level1iswin == true) || (level==2 && objectmanager.GetComponent<Level2Manager>().winLevel2 == true) || level == 3) && player.GetComponent<FPSMovement>().ismenuopen == false)
             {
 
                 move.SetActive(true);
             }
+            else
+                move.SetActive(false);
             isenter = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
         player = null;
-        if (this.GetComponent<PlayerEnter>().Dialog.gameObject.activeInHierarchy == false)
+        if (this.gameObject.GetComponent<PlayerEnter>().Dialog.gameObject.activeInHierarchy == false && (lv1manager.GetComponent<Level1Manager>().Level1iswin == true || objectmanager.GetComponent<Level2Manager>().winLevel2 == true || level == 3))
         {
 
             move.SetActive(false);
