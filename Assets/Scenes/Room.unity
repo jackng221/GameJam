@@ -704,7 +704,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 719524615}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1485,6 +1485,105 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
+--- !u!1 &371740019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 371740020}
+  - component: {fileID: 371740023}
+  - component: {fileID: 371740022}
+  - component: {fileID: 371740021}
+  m_Layer: 0
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &371740020
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371740019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
+  m_Children:
+  - {fileID: 1109377843}
+  m_Father: {fileID: 1248757425}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.021, y: 0.627}
+  m_SizeDelta: {x: 600, y: 330}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &371740021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371740019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &371740022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371740019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &371740023
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371740019}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &382662173
 GameObject:
   m_ObjectHideFlags: 0
@@ -1852,7 +1951,7 @@ RectTransform:
   - {fileID: 1865495949}
   - {fileID: 199642621}
   m_Father: {fileID: 719524615}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2498,10 +2597,10 @@ RectTransform:
   - {fileID: 1915003521}
   - {fileID: 2051162367}
   - {fileID: 202591584}
-  - {fileID: 575926736}
-  - {fileID: 190501025}
   - {fileID: 1447538082}
   - {fileID: 1558710486}
+  - {fileID: 575926736}
+  - {fileID: 190501025}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3508,7 +3607,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 28c0dcd4a3170f74aaba39de9c177ac9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3655,7 +3754,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 200
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4256,6 +4355,84 @@ MonoBehaviour:
   Level1iswin: 0
   once: 0
   unlock: {fileID: 927315292}
+--- !u!1 &1109377840
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109377843}
+  - component: {fileID: 1109377842}
+  - component: {fileID: 1109377841}
+  m_Layer: 0
+  m_Name: LightText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1109377841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109377840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.20392157}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 200
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 200
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: LIGHT
+--- !u!222 &1109377842
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109377840}
+  m_CullTransparentMesh: 0
+--- !u!224 &1109377843
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109377840}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 371740020}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1154749913
 GameObject:
   m_ObjectHideFlags: 0
@@ -4809,8 +4986,9 @@ Transform:
   m_GameObject: {fileID: 1248757420}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 6.832, y: 11.167, z: 13.817}
-  m_LocalScale: {x: 1.7, y: 2, z: 1}
-  m_Children: []
+  m_LocalScale: {x: 1.7, y: 2.307, z: 1}
+  m_Children:
+  - {fileID: 371740020}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -4826,6 +5004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2373accd7792fb48902f18e943c680c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clearText: {fileID: 1109377841}
 --- !u!1 &1248836462
 GameObject:
   m_ObjectHideFlags: 0
@@ -5634,7 +5813,7 @@ RectTransform:
   m_Children:
   - {fileID: 1668050574}
   m_Father: {fileID: 719524615}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -5869,7 +6048,7 @@ RectTransform:
   m_Children:
   - {fileID: 656671768}
   m_Father: {fileID: 719524615}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -21252,10 +21431,10 @@ MonoBehaviour:
   input:
   - This is a blue wall. Piece of Cake huh.
   input2: []
-  Dialog: {fileID: 0}
-  conversate: {fileID: 0}
-  lv1manager: {fileID: 0}
-  objectmanager: {fileID: 0}
+  Dialog: {fileID: 128481020}
+  conversate: {fileID: 1915003518}
+  lv1manager: {fileID: 1073680620}
+  objectmanager: {fileID: 8911324781876772222}
   isdoor: 0
 --- !u!65 &2660267831815695605
 BoxCollider:
@@ -21265,7 +21444,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2660267831815695606}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
@@ -21603,10 +21782,10 @@ MonoBehaviour:
   - This is a magenta wall... humm, it doesn't fit any of filter.
   - What should I do....
   input2: []
-  Dialog: {fileID: 0}
-  conversate: {fileID: 0}
-  lv1manager: {fileID: 0}
-  objectmanager: {fileID: 0}
+  Dialog: {fileID: 128481020}
+  conversate: {fileID: 1915003518}
+  lv1manager: {fileID: 1073680620}
+  objectmanager: {fileID: 8911324781876772222}
   isdoor: 0
 --- !u!65 &2660267832348051925
 BoxCollider:
@@ -21616,7 +21795,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2660267832348051926}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
@@ -21661,7 +21840,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2660267832438255647}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
@@ -21695,10 +21874,10 @@ MonoBehaviour:
   input:
   - This is a cyan wall.  I can smell the goal is coming huh.
   input2: []
-  Dialog: {fileID: 0}
-  conversate: {fileID: 0}
-  lv1manager: {fileID: 0}
-  objectmanager: {fileID: 0}
+  Dialog: {fileID: 128481020}
+  conversate: {fileID: 1915003518}
+  lv1manager: {fileID: 1073680620}
+  objectmanager: {fileID: 8911324781876772222}
   isdoor: 0
 --- !u!1 &2660267832438255647
 GameObject:
@@ -21766,10 +21945,10 @@ MonoBehaviour:
   - This is a red wall. I don't think this the "end" of my life?
   - By the way, I have a feeling that the end is coming.
   input2: []
-  Dialog: {fileID: 0}
-  conversate: {fileID: 0}
-  lv1manager: {fileID: 0}
-  objectmanager: {fileID: 0}
+  Dialog: {fileID: 128481020}
+  conversate: {fileID: 1915003518}
+  lv1manager: {fileID: 1073680620}
+  objectmanager: {fileID: 8911324781876772222}
   isdoor: 0
 --- !u!65 &2660267832444600487
 BoxCollider:
@@ -21779,7 +21958,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2660267832444600472}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
@@ -21904,7 +22083,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2660267832712766953}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
@@ -21940,10 +22119,10 @@ MonoBehaviour:
   - Well Well, seem I finally arrive here.
   - The goal is just behind this door!
   input2: []
-  Dialog: {fileID: 0}
-  conversate: {fileID: 0}
-  lv1manager: {fileID: 0}
-  objectmanager: {fileID: 0}
+  Dialog: {fileID: 128481020}
+  conversate: {fileID: 1915003518}
+  lv1manager: {fileID: 1073680620}
+  objectmanager: {fileID: 8911324781876772222}
   isdoor: 0
 --- !u!4 &2660267832926151200
 Transform:
@@ -22090,10 +22269,10 @@ MonoBehaviour:
   input:
   - This is a blue wall. Seem the filter is quite useful tool huh.
   input2: []
-  Dialog: {fileID: 0}
-  conversate: {fileID: 0}
-  lv1manager: {fileID: 0}
-  objectmanager: {fileID: 0}
+  Dialog: {fileID: 128481020}
+  conversate: {fileID: 1915003518}
+  lv1manager: {fileID: 1073680620}
+  objectmanager: {fileID: 8911324781876772222}
   isdoor: 0
 --- !u!65 &2660267833079383473
 BoxCollider:
@@ -22103,7 +22282,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2660267833079383474}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.2745366, y: 1, z: 1}
