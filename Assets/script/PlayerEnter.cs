@@ -29,6 +29,7 @@ public class PlayerEnter : MonoBehaviour
             for (int i = 0; i < input.Count; i++)
             {
                 Dialog.GetComponent<TextControl>().text.Add(input[i]);
+                Dialog.GetComponent<TextControl>().type = 0;
             }
             Dialog.gameObject.SetActive(true);
             conversate.SetActive(false);
@@ -39,23 +40,27 @@ public class PlayerEnter : MonoBehaviour
                 for (int i = 0; i < input2.Count; i++)
                 {
                     Dialog.GetComponent<TextControl>().text.Add(input2[i]);
+                    Dialog.GetComponent<TextControl>().type = 2;
                 }
             }else if (isdoor == 2 && objectmanager.GetComponent<Level2Manager>().winLevel2)
             {
                 for (int i = 0; i < input2.Count; i++)
                 {
                     Dialog.GetComponent<TextControl>().text.Add(input2[i]);
+                    Dialog.GetComponent<TextControl>().type = 2;
                 }
             }else if (isdoor == 3)
             {
                 for (int i = 0; i < input2.Count; i++)
                 {
                     Dialog.GetComponent<TextControl>().text.Add(input2[i]);
+                    Dialog.GetComponent<TextControl>().type = 2;
                 }
             } else {
                 for (int i = 0; i < input.Count; i++)
                 {
                     Dialog.GetComponent<TextControl>().text.Add(input[i]);
+                    Dialog.GetComponent<TextControl>().type = 0;
                 }
             }
             Dialog.gameObject.SetActive(true);

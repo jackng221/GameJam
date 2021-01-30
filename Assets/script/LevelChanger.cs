@@ -39,8 +39,11 @@ public class LevelChanger : MonoBehaviour
                     Switching.DOColor(new Color32(255, 255, 255, 255), 2f).OnComplete(() => {
                         player.transform.position = level2sp.transform.position;
                         Switching.color = new Color32(255, 255, 255, 0);
-                        player.GetComponent<FPSMovement>().ischanging = false;
-                        player.GetComponent<FPSMovement>().ismenuopen = false;
+                        if (player.transform.position == level2sp.transform.position) {
+                            player.GetComponent<FPSMovement>().ischanging = false;
+                            player.GetComponent<FPSMovement>().ismenuopen = false;
+                        }
+                        
                     });
                 }
 
@@ -54,6 +57,11 @@ public class LevelChanger : MonoBehaviour
                     Switching.color = new Color32(255, 255, 255, 0);
                     player.GetComponent<FPSMovement>().ischanging = false;
                     player.GetComponent<FPSMovement>().ismenuopen = false;
+                    if (player.transform.position == level3sp.transform.position)
+                    {
+                        player.GetComponent<FPSMovement>().ischanging = false;
+                        player.GetComponent<FPSMovement>().ismenuopen = false;
+                    }
                 });
             }
             if (level == 3)

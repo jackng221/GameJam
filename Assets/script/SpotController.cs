@@ -9,21 +9,23 @@ public class SpotController : MonoBehaviour
     public Vector3 targetPosition;
     public NavMeshPath navMeshPath;
     bool hitObect = false;
+    public GameObject lightsource;
     // Start is called before the first frame update
     void Start()
     {
         navMeshPath = new NavMeshPath();
+        lightsource = GameObject.FindGameObjectWithTag("Flashlight");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && GameObject.FindGameObjectWithTag("Player").GetComponent<SetCull>().isgetLight == true)
         {
-            if (GameObject.FindGameObjectWithTag("Flashlight").GetComponent<ShootShphere>().owncolor != ObjectManager.LightColor.Black)
+            if (lightsource.GetComponent<ShootShphere>().owncolor != ObjectManager.LightColor.Black)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+                Ray ray = new Ray(lightsource.transform.position, lightsource.transform.forward);
+                RaycastHit hit;
             
                 if (Physics.Raycast(ray, out hit))
                 {

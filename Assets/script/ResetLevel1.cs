@@ -9,6 +9,8 @@ public class ResetLevel1 : MonoBehaviour
     GameObject GameManager, Dialog, hint, conversate;
     bool istrue = false;
     GameObject player;
+    [SerializeField]
+    AudioSource buttonclick;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class ResetLevel1 : MonoBehaviour
     void Update()
     {
         if (isenter == true && Input.GetKeyDown(KeyCode.I)) {
+            buttonclick.Play();
             GameManager.GetComponent<Level1Manager>().win[0].GetComponent<TextColorChecker>().currentcolor = ObjectManager.LightColor.Magenta;
             GameManager.GetComponent<Level1Manager>().win[0].GetComponent<TextColorChecker>().Recieved = ObjectManager.LightColor.White;
             GameManager.GetComponent<Level1Manager>().win[0].GetComponent<TextColorChecker>().isFulfil = false;
@@ -35,7 +38,8 @@ public class ResetLevel1 : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<FPSMovement>().ismenuopen = true;
 
             Dialog.GetComponent<TextControl>().text.Add("What is this?");
-            Dialog.GetComponent<TextControl>().text.Add("This look like a button...?"); 
+            Dialog.GetComponent<TextControl>().text.Add("This look like a button...?");
+            Dialog.GetComponent<TextControl>().type = 1;
             Dialog.gameObject.SetActive(true);
             conversate.SetActive(false);
             hint.SetActive(false);

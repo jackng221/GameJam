@@ -13,11 +13,12 @@ public class TextControl : MonoBehaviour
     [SerializeField]
     Text textfield, hintcontinue;
     [SerializeField]
-    GameObject DialogCanvas, Blur;
+    GameObject DialogCanvas, Blur, conversate, interact, open;
     [SerializeField]
     int Switch = 0;
     [SerializeField]
     AudioSource typing;
+    public int type = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,11 +61,26 @@ public class TextControl : MonoBehaviour
                     pressed = 0;
                     text.Clear();
                     Blur.gameObject.SetActive(false);
+                    if (type == 0) {
+                        conversate.SetActive(true);
+                    }
+                    else if(type == 1) {
+                        conversate.SetActive(true);
+                        interact.SetActive(true);
+                        type = 0;
+                    } else if (type == 2)
+                        {
+                            conversate.SetActive(true);
+                            open.SetActive(true);
+                            type = 0;
+                        }
+
                 }
                 hintcontinue.gameObject.SetActive(false);
                 hintcontinue.color = new Color32(50, 50, 50, 255);
                 pointer = 0;
                 textfield.text = "";
+                
         }
 
         if (text.Count != 0)
