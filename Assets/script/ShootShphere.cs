@@ -55,8 +55,7 @@ public class ShootShphere : MonoBehaviour
         }
         RaycastHit hit, hit2;
         Vector3 pos = this.gameObject.transform.position;
-        
-        if (Physics.SphereCast(pos, this.gameObject.GetComponent<Light>().shadowRadius, transform.forward, out hit,Mathf.Infinity)) {
+        if (Physics.SphereCast(pos, 0, transform.forward, out hit,Mathf.Infinity)) {
             //Reset Color from prev, (Situation of change hit target)
             if (prevHitObj != hit.transform.gameObject && prevHitObj != null) {
                 if (prevHitObj.transform.tag == "HideWord")
