@@ -72,11 +72,14 @@ public class LevelChanger : MonoBehaviour
                     wining.DOColor(new Color32(255, 255, 255, 255), 2f).OnComplete(() => {
                         GameEnd.gameObject.SetActive(true);
                         Wintext.gameObject.SetActive(true);
+                        player.GetComponent<FPSMovement>().ismenuopen = true;
+                        player.GetComponent<FPSMovement>().ischanging = true;
                     });
             }
         }
         if (this.gameObject.GetComponent<PlayerEnter>().Dialog.gameObject.activeInHierarchy == true) {
             move.SetActive(false);
+
         }
 
     }
