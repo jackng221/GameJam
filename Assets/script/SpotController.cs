@@ -9,12 +9,12 @@ public class SpotController : MonoBehaviour
     public Vector3 targetPosition;
     public NavMeshPath navMeshPath;
     bool hitObect = false;
+    [SerializeField]
     public GameObject lightsource;
     // Start is called before the first frame update
     void Start()
     {
         navMeshPath = new NavMeshPath();
-        lightsource = GameObject.FindGameObjectWithTag("Flashlight");
     }
 
     // Update is called once per frame
