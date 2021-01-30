@@ -20836,9 +20836,9 @@ GameObject:
   - component: {fileID: 2660267831815695607}
   - component: {fileID: 2660267831815695605}
   - component: {fileID: 2660267831815695604}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: GameObject (4)
-  m_TagString: Untagged
+  m_TagString: BlueObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20967,9 +20967,9 @@ GameObject:
   - component: {fileID: 2660267832036600885}
   - component: {fileID: 2660267832036600884}
   - component: {fileID: 2660267832036600887}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: RedWall
-  m_TagString: RedObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21187,9 +21187,9 @@ GameObject:
   - component: {fileID: 2660267832348051927}
   - component: {fileID: 2660267832348051925}
   - component: {fileID: 2660267832348051924}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: GameObject (3)
-  m_TagString: Untagged
+  m_TagString: MagentaObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21266,9 +21266,9 @@ GameObject:
   - component: {fileID: 2660267832438255644}
   - component: {fileID: 2660267832438255642}
   - component: {fileID: 2660267832438255645}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: CyanObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21286,7 +21286,7 @@ GameObject:
   - component: {fileID: 2660267832444600486}
   m_Layer: 9
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: RedObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21379,9 +21379,9 @@ GameObject:
   - component: {fileID: 2660267832677480295}
   - component: {fileID: 2660267832677480294}
   - component: {fileID: 2660267832677480281}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: GreenWall
-  m_TagString: GreenObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21444,9 +21444,9 @@ GameObject:
   - component: {fileID: 2660267832712766966}
   - component: {fileID: 2660267832712766964}
   - component: {fileID: 2660267832712766967}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: GameObject (3)
-  m_TagString: Untagged
+  m_TagString: YellowObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21542,9 +21542,9 @@ GameObject:
   - component: {fileID: 2660267832926151201}
   - component: {fileID: 2660267832926151205}
   - component: {fileID: 2660267832926151204}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: YellowWall
-  m_TagString: YellowObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21674,9 +21674,9 @@ GameObject:
   - component: {fileID: 2660267833079383475}
   - component: {fileID: 2660267833079383473}
   - component: {fileID: 2660267833079383472}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: GreenObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21921,9 +21921,9 @@ GameObject:
   - component: {fileID: 2660267833443570327}
   - component: {fileID: 2660267833443570326}
   - component: {fileID: 2660267833443570313}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: BlueWall
-  m_TagString: BlueObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22064,9 +22064,9 @@ GameObject:
   - component: {fileID: 2660267833448136995}
   - component: {fileID: 2660267833448136999}
   - component: {fileID: 2660267833448136998}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: CyanWall
-  m_TagString: CyanObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22171,9 +22171,9 @@ GameObject:
   - component: {fileID: 2660267833600193008}
   - component: {fileID: 2660267833600193013}
   - component: {fileID: 2660267833600193012}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: MagentaWall
-  m_TagString: MagentaObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
